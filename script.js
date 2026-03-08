@@ -15,18 +15,9 @@ const galeriaData = [
 // Subgalerías relacionadas
 const subGalerias = {
   1: [
+   
     {
       id: "1-101",
-      titulo: "Calendario",
-      imagenes: [
-        "./imagenes/calendario/isometrico.webp",
-        "./imagenes/calendario/frontal.webp",
-        "./imagenes/calendario/lateral.webp"
-      ],
-      descripcion: "Versión anual con estructura poligonal."
-    },
-    {
-      id: "1-102",
       titulo: "Mundial 2026",
       imagenes: [
         "./imagenes/mundial/isometrico.webp",
@@ -36,7 +27,7 @@ const subGalerias = {
       descripcion: "Diseño alusivo al Mundial con banderas de EE.UU., México y Canadá."
     },
     {
-      id: "1-103",
+      id: "1-102",
       titulo: "Pintores Universales",
       imagenes: [
         "./imagenes/pintores_universales/isometrico.webp",
@@ -46,7 +37,7 @@ const subGalerias = {
       descripcion: "Serie inspirada en grandes maestros del arte universal."
     },
     {
-      id: "1-104",
+      id: "1-103",
       titulo: "Escritores Colombianos",
       imagenes: [
         "./imagenes/escritores_colombianos/isometrico.webp",
@@ -56,7 +47,7 @@ const subGalerias = {
       descripcion: "Colección que rinde homenaje a la literatura colombiana."
     },
     {
-      id: "1-105",
+      id: "1-104",
       titulo: "Escritores universales",
       imagenes: [
         "./imagenes/escritores_universales/isometrico.webp",
