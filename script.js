@@ -20,9 +20,11 @@ const subGalerias = {
       id: "1-101",
       titulo: "Mundial 2026",
       imagenes: [
-        "./imagenes/mundial/isometrico.webp",
-        "./imagenes/mundial/frontal.webp",
-        "./imagenes/mundial/lateral.webp"
+        "./imagenes/2.1.1.4._mundial/2.1.1.4.1._isometrico.webp",
+        "./imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
+        "./imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
+        "./imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
+        "./imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
       ],
       descripcion: "Diseño alusivo al Mundial con banderas de EE.UU., México y Canadá."
     },
@@ -30,9 +32,11 @@ const subGalerias = {
       id: "1-102",
       titulo: "Pintores Universales",
       imagenes: [
-        "./imagenes/pintores_universales/isometrico.webp",
-        "./imagenes/pintores_universales/frontal.webp",
-        "./imagenes/pintores_universales/lateral.webp"
+        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.1._isometrico.webp",
+        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.2._frontal.webp",
+        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.3._lateral.webp",
+        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.4._superior.webp",
+        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.5._inferior.webp"
       ],
       descripcion: "Serie inspirada en grandes maestros del arte universal."
     },
@@ -40,9 +44,12 @@ const subGalerias = {
       id: "1-103",
       titulo: "Escritores Colombianos",
       imagenes: [
-        "./imagenes/escritores_colombianos/isometrico.webp",
-        "./imagenes/escritores_colombianos/frontal.webp",
-        "./imagenes/escritores_colombianos/lateral.webp"
+        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.1._isometrico.webp",
+        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.2._frontal.webp",
+        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.3._lateral.webp",
+        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.4._superior.webp",
+        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.5._inferior.webp"
+        
       ],
       descripcion: "Colección que rinde homenaje a la literatura colombiana."
     },
@@ -50,9 +57,11 @@ const subGalerias = {
       id: "1-104",
       titulo: "Escritores universales",
       imagenes: [
-        "./imagenes/escritores_universales/isometrico.webp",
-        "./imagenes/escritores_universales/frontal.webp",
-        "./imagenes/escritores_universales/lateral.webp"
+        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.1._isometrico.webp",
+        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.2._frontal.webp",
+        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.3._lateral.webp",
+        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.4._superior.webp",
+        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.5._inferior.webp"
       ],
       descripcion: "Colección que rinde homenaje a la literatura colombiana."
     }
@@ -62,56 +71,56 @@ const subGalerias = {
       id: "2-201",
       titulo: "Solitario",
       imagenes: [
-        "./imagenes/solitario/isometrico.webp",
-        "./imagenes/solitario/frontal.webp",
-        "./imagenes/solitario/lateral.webp"
+        "./imagenes/1.2.1._flores/1.2.1.1._isometrico.webp",
+        "./imagenes/1.2.1._flores/1.2.1.2._frontal.webp",
+        "./imagenes/1.2.1._flores/1.2.1.3._lateral.webp",
+        "./imagenes/1.2.1._flores/1.2.1.4._superior.webp",
+        "./imagenes/1.2.1._flores/1.2.1.5._inferior.webp"
       ],
       descripcion: "Diseño alusivo al Mundial con banderas de EE.UU., México y Canadá."
-    }
-  ],
-  3: [
+    },
     {
-      id: "3-301",
+      id: "2-202",
       titulo: "Jarrón",
       imagenes: [
-        "./imagenes/jarron/isometrico.webp",
-        "./imagenes/jarron/frontal.webp",
-        "./imagenes/jarron/lateral.webp"
+        "./imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
+        "./imagenes/1.1.1._flores/1.1.1.2._frontal.webp",
+        "./imagenes/1.1.1._flores/1.1.1.3._lateral.webp",
+        "./imagenes/1.1.1._flores/1.1.1.4._superior.webp",
+        "./imagenes/1.1.1._flores/1.1.1.5._inferior.webp"
+
+
       ],
       descripcion: "Serie inspirada en grandes maestros del arte universal."
     }
   ],
-  4: [
+  
+  3: [
     {
-      id: "4-401",
+      id: "3-301",
       titulo: "Condor",
       imagenes: [
-        "./imagenes/condor/isometrico.webp",
-        "./imagenes/condor/frontal.webp",
-        "./imagenes/condor/lateral.webp"
+        "./imagenes/3.1.1.1._condor/3.1.1.1.1._isometrico.webp",
+        "./imagenes/3.1.1.1._condor/3.1.1.1.2._frontal.webp",
+        "./imagenes/3.1.1.1._condor/3.1.1.1.3._lateral.webp",
+        "./imagenes/3.1.1.1._condor/3.1.1.1.4._superior.webp",
+        "./imagenes/3.1.1.1._condor/3.1.1.1.5._inferior.webp"
       ],
       descripcion: "Colección que rinde homenaje a la literatura colombiana."
     },
     {
-      id: "4-402",
+      id: "3-302",
       titulo: "Frutero",
       imagenes: [
-        "./imagenes/frutero/isometrico.webp",
-        "./imagenes/frutero/frontal.webp",
-        "./imagenes/frutero/lateral.webp"
+        "./imagenes/3.1.1.2._frutas/3.1.1.2.1._isometrico.webp",
+        "./imagenes/3.1.1.2._frutas/3.1.1.2.2._frontal.webp",
+        "./imagenes/3.1.1.2._frutas/3.1.1.2.3._lateral.webp",
+        "./imagenes/3.1.1.2._frutas/3.1.1.2.4._superior.webp",
+        "./imagenes/3.1.1.2._frutas/3.1.1.2.5._inferior.webp"
       ],
       descripcion: "Colección que rinde homenaje a la literatura colombiana."
     },
-    {
-      id: "4-403",
-      titulo: "Dollar",
-      imagenes: [
-        "./imagenes/dolar_1/isometrico.webp",
-        "./imagenes/dolar_1/frontal.webp",
-        "./imagenes/dolar_1/lateral.webp"
-      ],
-      descripcion: "Colección que rinde homenaje a la literatura colombiana."
-    }
+    
   ],
   5: [
     {
