@@ -1656,3 +1656,41 @@ color:#e6e6e6;
                     }
                     
                     }
+
+                    @media (max-width:768px){
+
+                      /* HEADER */
+                      .header{
+                          flex-direction:column;
+                          gap:12px;
+                          text-align:center;
+                      }
+                      
+                      /* LOGO MAS GRANDE */
+                      .logo img{
+                          height:90px;   /* antes 60px aprox */
+                      }
+                      
+                      /* MENU MAS PEQUEÑO */
+                      nav ul{
+                          flex-wrap:wrap;
+                          justify-content:center;
+                          gap:12px;
+                      }
+                      
+                      nav ul li a{
+                          font-size:14px;   /* reduce el tamaño del texto */
+                          padding:4px 6px;
+                      }
+                      
+                      /* MOSAICO MAS PEQUEÑO */
+                      .carousel{
+                          width:150px;   /* antes 200px */
+                      }
+                      
+                      .track img{
+                          width:28px;   /* antes 40px */
+                          margin:0 3px;
+                      }
+                      
+                      }
