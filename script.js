@@ -1,380 +1,759 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-// =======================================================
-// 📦 GALERÍA INTERACTIVA CON MODAL Y SUBMODAL PROFESIONAL
-// =======================================================
-
-// Datos principales
-const galeriaData = [
-  { id: 1, titulo: "PortaLápiz", info: ["Lista de Diseños", "Formato A3"] },
-  { id: 2, titulo: "Soliatarios", info: ["Edición especial con banderas", "Formato panorámico"] },
-  { id: 3, titulo: "Jarrones", info: ["Obras clásicas", "Colección artística"] },
-  { id: 4, titulo: "Octaedros Porta_Lápiz", info: ["Autores destacados", "Serie literaria"] },
-  { id: 5, titulo: "Octaedros para colgar", info: ["Autores destacados", "Serie literaria"] }
-];
-
-// Subgalerías relacionadas
-const subGalerias = {
-  1: [
-   
-    {
-      id: "1-101",
-      titulo: "Mundial 2026",
-      imagenes: [
-        "./imagenes/2.1.1.4._mundial/2.1.1.4.1._isometrico.webp",
-        "./imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
-        "./imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
-        "./imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
-        "./imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
-      ],
-      descripcion: "Diseño alusivo al Mundial con banderas de EE.UU., México y Canadá."
-    },
-    {
-      id: "1-102",
-      titulo: "Pintores Universales",
-      imagenes: [
-        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.1._isometrico.webp",
-        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.2._frontal.webp",
-        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.3._lateral.webp",
-        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.4._superior.webp",
-        "./imagenes/2.1.1.5._pintores_universales/2.1.1.5.5._inferior.webp"
-      ],
-      descripcion: "Serie inspirada en grandes maestros del arte universal."
-    },
-    {
-      id: "1-103",
-      titulo: "Escritores Colombianos",
-      imagenes: [
-        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.1._isometrico.webp",
-        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.2._frontal.webp",
-        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.3._lateral.webp",
-        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.4._superior.webp",
-        "./imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.5._inferior.webp"
-        
-      ],
-      descripcion: "Colección que rinde homenaje a la literatura colombiana."
-    },
-    {
-      id: "1-104",
-      titulo: "Escritores universales",
-      imagenes: [
-        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.1._isometrico.webp",
-        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.2._frontal.webp",
-        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.3._lateral.webp",
-        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.4._superior.webp",
-        "./imagenes/2.1.1.2_escritores_universales/2.1.1.2.5._inferior.webp"
-      ],
-      descripcion: "Colección que rinde homenaje a la literatura colombiana."
-    }
-  ],
-  2: [
-    {
-      id: "2-201",
-      titulo: "Solitario",
-      imagenes: [
-        "./imagenes/1.2.1._flores/1.2.1.1._isometrico.webp",
-        "./imagenes/1.2.1._flores/1.2.1.2._frontal.webp",
-        "./imagenes/1.2.1._flores/1.2.1.3._lateral.webp",
-        "./imagenes/1.2.1._flores/1.2.1.4._superior.webp",
-        "./imagenes/1.2.1._flores/1.2.1.5._inferior.webp"
-      ],
-      descripcion: "Diseño alusivo al Mundial con banderas de EE.UU., México y Canadá."
-    },
-    {
-      id: "2-202",
-      titulo: "Jarrón",
-      imagenes: [
-        "./imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
-        "./imagenes/1.1.1._flores/1.1.1.2._frontal.webp",
-        "./imagenes/1.1.1._flores/1.1.1.3._lateral.webp",
-        "./imagenes/1.1.1._flores/1.1.1.4._superior.webp",
-        "./imagenes/1.1.1._flores/1.1.1.5._inferior.webp"
-
-
-      ],
-      descripcion: "Serie inspirada en grandes maestros del arte universal."
-    }
+  let indiceImagenActual = 0;
+  let imagenesActuales = [];
+  let modalItemActual = null;
+  
+  const modal = document.getElementById("modal");
+  const modalGaleriaImg = document.getElementById("modal-galeria-img");
+  const modalTituloEl = document.getElementById("modal-titulo");
+  
+  const miniaturasContainer = document.getElementById("modal-miniaturas");
+  const contenedorGalerias = document.getElementById("galerias-container");
+  
+  const tooltip = document.getElementById("tooltip-info");
+  const tooltipLista = document.getElementById("tooltip-lista");
+  
+  
+  // ===== DATOS DE LAS GALERIAS =====
+  
+  const galeriaData = [
+  
+  {
+  //portalapiz_14_caras  
+  id:1,
+  titulo:"Portalápiz",
+  altura:"8.4 cm",
+  diametro:"13.2 cm",
+  precio:"$55.000",
+  
+  imagenes:[
+  
+  //miniatura_portalapiz_mundial 
+  {
+  titulo:"Mundial 2026",
+  src:"imagenes/2.1.1.4._mundial/2.1.1.4.1._isometrico.webp",
+  
+  info:[
+  "Maple",
+  "Clutch",
+  "Sayu",
+  "Estadio Benz",
+  "Estadio BC Place",
+  "Estadio Azteca",
+  "Bandera Colombia",
+  "Bandera EEUU",
+  "Bandera Canada",
+  "Bandera México",
+  "Balon",
+  "Trofeo"
   ],
   
-  3: [
-    {
-      id: "3-301",
-      titulo: "Condor",
-      imagenes: [
-        "./imagenes/3.1.1.1._condor/3.1.1.1.1._isometrico.webp",
-        "./imagenes/3.1.1.1._condor/3.1.1.1.2._frontal.webp",
-        "./imagenes/3.1.1.1._condor/3.1.1.1.3._lateral.webp",
-        "./imagenes/3.1.1.1._condor/3.1.1.1.4._superior.webp",
-        "./imagenes/3.1.1.1._condor/3.1.1.1.5._inferior.webp"
-      ],
-      descripcion: "Colección que rinde homenaje a la literatura colombiana."
+  detalles:[
+  "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
+  "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
+  "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
+  "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
+  ]
+  
+  },
+  
+  {
+  titulo:"Mar del Plata",
+  src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
+  
+  info:[
+  "Logotipo de la empresa",
+  "Dirección",
+  "Productos"
+  ],
+  
+  detalles:[
+  "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
+  "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
+  "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
+  "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
+  ]
+  
+  },
+
+  {
+    titulo:"Escritores Colombianos",
+    src:"imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.1._isometrico.webp",
+    
+    info:[
+    "Gabriel García Márquez",
+    "José Eustasio Rivera",
+    "Álvaro Mutis",
+    "Rafael Pombo",
+    "Julio Florez",
+    "Jorge Isaacs",
+    "Enrique Buenaventura",
+    "Arturo Álape",
+    "Alfredo Iriarte",
+    "Tomás Carrasquilla",
+    "José Asunción Silva",
+    "Fernando Vallejo"
+    
+    
+    ],
+    
+    detalles:[
+    "imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.2._frontal.webp",
+    "imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.3._lateral.webp",
+    "imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.4._superior.webp",
+    "imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.5._inferior.webp"
+    ]
+    
     },
+
     {
-      id: "3-302",
-      titulo: "Frutero",
-      imagenes: [
-        "./imagenes/3.1.1.2._frutas/3.1.1.2.1._isometrico.webp",
-        "./imagenes/3.1.1.2._frutas/3.1.1.2.2._frontal.webp",
-        "./imagenes/3.1.1.2._frutas/3.1.1.2.3._lateral.webp",
-        "./imagenes/3.1.1.2._frutas/3.1.1.2.4._superior.webp",
-        "./imagenes/3.1.1.2._frutas/3.1.1.2.5._inferior.webp"
+      titulo:"Escritores Universales",
+      src:"imagenes/2.1.1.2_escritores_universales/2.1.1.2.1._isometrico.webp",
+      
+      info:[
+      "William Shakespeare",
+      "León Tolstói",
+      "Oscar Wilde",
+      "Fiódor Dostoyevski",
+      "Mark Twain",
+      "Miguel de Unamuno",
+      "Edgar Allan Poe",
+      "Charles Dickens",
+      "Ernest Hemingway",
+      "Franz Kafka",
+      "Pablo Neruda",
+      "Miguel de Cervantes"
+      
+      
       ],
-      descripcion: "Colección que rinde homenaje a la literatura colombiana."
+      
+      detalles:[
+      "imagenes/2.1.1.2_escritores_universales/2.1.1.2.2._frontal.webp",
+      "imagenes/2.1.1.2_escritores_universales/2.1.1.2.3._lateral.webp",
+      "imagenes/2.1.1.2_escritores_universales/2.1.1.2.4._superior.webp",
+      "imagenes/2.1.1.2_escritores_universales/2.1.1.2.5._inferior.webp"
+      ]
+      
+      },
+
+      {
+        titulo:"Matemáticos y Físicos",
+        src:"imagenes/2.1.1.3._matemáticos/2.1.1.3.1._isometrico.webp",
+        
+        info:[
+        "Jordan Gauss",
+        "Joseph Fourier",
+        "Isaac Newton",
+        "James Clerk Maxwell",
+        "Daniel Bernoulli",
+        "Michael Faraday",
+        "Pierre-Simon Laplace",
+        "Albert Einstein",
+        "Max Planck",
+        "Nikola Tesla",
+        "Ernest Rutherford",
+        "Godofredo Leibniz",
+        
+        
+        
+        ],
+        
+        detalles:[
+        "imagenes/2.1.1.3._matemáticos/2.1.1.3.2._frontal.webp",
+        "imagenes/2.1.1.3._matemáticos/2.1.1.3.3._lateral.webp",
+        "imagenes/2.1.1.3._matemáticos/2.1.1.3.4._superior.webp",
+        "imagenes/2.1.1.3._matemáticos/2.1.1.3.5._inferior.webp"
+        ]
+        
+        },
+
+        {
+          titulo:"Pintores Universales",
+          src:"imagenes/2.1.1.5._pintores_universales/2.1.1.5.1._isometrico.webp",
+          
+          info:[
+          "Salvador Dalí",
+          "Francisco de Goya",
+          "Diego Velázquez",
+          "Edgar Degas",
+          "Paul Gauguin",
+          "Henri Lautrec",
+          "Claude Monet",
+          "Caravaggio",
+          "Leonardo da Vinci",
+          "Pablo Picasso",
+          "Rembrandt",
+          "Vincent van Gogh",
+          
+          
+          
+          ],
+          
+          detalles:[
+          "imagenes/2.1.1.5._pintores_universales/2.1.1.5.2._frontal.webp",
+          "imagenes/2.1.1.5._pintores_universales/2.1.1.5.3._lateral.webp",
+          "imagenes/2.1.1.5._pintores_universales/2.1.1.5.4._superior.webp",
+          "imagenes/2.1.1.5._pintores_universales/2.1.1.5.5._inferior.webp"
+          ]
+          
+          },
+      
+    
+  
+
+  
+  ]
+  
+  },
+  {
+    id:1,
+    titulo:"Volumen",
+    altura:"8.4 cm",
+    diametro:"13.2 cm",
+    precio:"$55.000",
+    
+    imagenes:[
+    
+    {
+    titulo:"Mar del Plata",
+    src:"imagenes/2.2.1.1._mar_del_plata/2.2.1.1.1._isometrico.webp",
+    
+    info:[
+    "Maple",
+    "Clutch",
+    "Sayu",
+    "Estadio Benz",
+    "Estadio BC Place",
+    "Estadio Azteca",
+    "Bandera Colombia",
+    "Bandera EEUU",
+    "Bandera Canada",
+    "Bandera México",
+    "Balon",
+    "Trofeo"
+    ],
+    
+    detalles:[
+    "imagenes/2.2.1.1._mar_del_plata/2.2.1.1.2._frontal.webp",
+    "imagenes/2.2.1.1._mar_del_plata/2.2.1.1.3._lateral.webp",
+    "imagenes/2.2.1.1._mar_del_plata/2.2.1.1.4._superior.webp",
+    "imagenes/2.2.1.1._mar_del_plata/2.2.1.1.5._inferior.webp"
+    ]
+    
     },
     
-  ],
-  5: [
     {
-      id: "5-501",
-      titulo: "Dollar",
-      imagenes: [
-        "./imagenes/dolar_2/isometrico.webp",
-        "./imagenes/dolar_2/frontal.webp",
-        "./imagenes/dolar_2/lateral.webp"
-      ],
-      descripcion: "Serie inspirada en grandes maestros del arte universal."
-    }
-  ]
-};
-
-// =======================================================
-// 🧭 MODAL PRINCIPAL
-// =======================================================
-let modalActiveId = null;
-let subIndices = {};
-const modal = document.getElementById("modal");
-const modalTituloEl = document.getElementById("modal-titulo");
-const modalTextoEl = document.getElementById("modal-texto");
-const modalGaleriaEl = document.getElementById("modal-galeria");
-const modalGaleriaImg = document.getElementById("modal-galeria-img");
-const submodal = document.getElementById("submodal");
-
-function abrirModal(id) {
-  const item = galeriaData.find(g => g.id === id);
-  if (!item) return;
-
-  modalActiveId = id;
-  modalTituloEl.textContent = item.titulo;
-  modalTextoEl.innerHTML = "";
-
-  if (Array.isArray(item.info)) {
-    const ul = document.createElement("ul");
-    ul.className = "modal-lista";
-    ul.innerHTML = item.info.map(i => `<li>${i}</li>`).join("");
-    modalTextoEl.appendChild(ul);
-  }
-
-  modalGaleriaEl.style.display = "none";
-  modalGaleriaImg.src = "";
-
-  const btnAntiguo = modal.querySelector(".modal-cerrar-flotante");
-  if (btnAntiguo) btnAntiguo.remove();
-
-  const contenedorBtn = document.createElement("div");
-  contenedorBtn.className = "modal-cerrar-flotante";
-  const btnCerrar = document.createElement("button");
-  btnCerrar.textContent = "Cerrar";
-  btnCerrar.onclick = cerrarModal;
-  contenedorBtn.appendChild(btnCerrar);
-  modal.querySelector(".modal-contenido").appendChild(contenedorBtn);
-
-  modal.style.display = "flex";
-  modal.classList.add("mostrar");
-
-  setTimeout(() => renderSubGaleria(id), 150);
-}
-
-// =======================================================
-// 🖼️ SUBGALERÍA
-// =======================================================
-function renderSubGaleria(mainId) {
-  const existing = modalTextoEl.querySelector(".subgaleria-container");
-  if (existing) existing.remove();
-
-  const subs = subGalerias[mainId];
-  if (!subs || subs.length === 0) return;
-
-  const wrap = document.createElement("div");
-  wrap.className = "subgaleria-container matriz-galerias";
-  wrap.style.marginTop = "18px";
-
-  subs.forEach(sub => {
-    const card = document.createElement("div");
-    card.className = "galeria";
-    card.style.width = "200px";
-    card.style.padding = "10px";
-
-    const img = document.createElement("img");
-    img.id = `sub-img-${sub.id}`;
-    img.src = sub.imagenes[0] || "./imagenes/placeholder.jpg";
-    img.alt = sub.titulo;
-    img.style.cursor = "pointer";
-    img.style.transition = "opacity 0.25s ease";
-    img.addEventListener("click", () => abrirLightbox(img.src));
-    card.appendChild(img);
-
-    const btns = document.createElement("div");
-    btns.className = "botones1";
-    btns.style.display = "flex";
-    btns.style.justifyContent = "space-between";
-
-    const prev = document.createElement("button");
-    prev.textContent = "⟨";
-    prev.className = "btn-galeria";
-    prev.addEventListener("click", (e) => {
-      e.stopPropagation();
-      cambiarSubImagen(sub.id, -1);
-    });
-
-    const next = document.createElement("button");
-    next.textContent = "⟩";
-    next.className = "btn-galeria";
-    next.addEventListener("click", (e) => {
-      e.stopPropagation();
-      cambiarSubImagen(sub.id, 1);
-    });
-
-    btns.appendChild(prev);
-    btns.appendChild(next);
-    card.appendChild(btns);
-
-    const numDiv = document.createElement("div");
-    numDiv.className = "numero";
-    numDiv.innerHTML = `<h5 class="titulo-calendario">${sub.titulo}</h5>`;
-    card.appendChild(numDiv);
-
-    const infoDiv = document.createElement("div");
-    infoDiv.className = "boton-info";
-    const infoBtn = document.createElement("button");
-    infoBtn.textContent = "Ver Inf.";
-    infoBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      abrirSubModalDentroModal(sub);
-    });
-    infoDiv.appendChild(infoBtn);
-    card.appendChild(infoDiv);
-
-    wrap.appendChild(card);
-  });
-
-  modalTextoEl.appendChild(wrap);
-  document.querySelector(".modal-contenido").classList.add("subgaleria-activa");
-}
-
-// =======================================================
-// 🔁 CAMBIAR IMAGEN DE SUBGALERÍA
-// =======================================================
-function cambiarSubImagen(subId, dir) {
-  const sub = Object.values(subGalerias).flat().find(s => s.id === subId);
-  if (!sub || !sub.imagenes.length) return;
-
-  if (!(subId in subIndices)) subIndices[subId] = 0;
-  subIndices[subId] = (subIndices[subId] + dir + sub.imagenes.length) % sub.imagenes.length;
-
-  const imgEl = document.getElementById(`sub-img-${subId}`);
-  if (!imgEl) return;
-
-  imgEl.style.opacity = 0;
-  setTimeout(() => {
-    imgEl.src = sub.imagenes[subIndices[subId]];
-    imgEl.style.opacity = 1;
-  }, 160);
-}
-
-// =======================================================
-// 📖 SUBMODAL (DENTRO DEL MODAL)
-// =======================================================
-// =======================================================
-// 🧭 SUBMODAL DENTRO DEL MODAL (FLUJO CORREGIDO)
-// =======================================================
-function abrirSubModalDentroModal(sub) {
-  // Asegurar que el modal ya está completamente visible
-  if (modal.style.display !== "flex") return;
+    titulo:"Mar del Plata",
+    src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
+    
+    info:[
+    "Logotipo de la empresa",
+    "Dirección",
+    "Productos"
+    ],
+    
+    detalles:[
+    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
+    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
+    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
+    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
+    ]
+    
+    },
   
-  submodal.style.display = "flex";
-  submodal.classList.add("mostrar");
+    {
+      titulo:"Escritores_Colombianos",
+      src:"imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.1._isometrico.webp",
+      
+      info:[
+      "Logotipo de la empresa",
+      "Dirección",
+      "Productos"
+      ],
+      
+      detalles:[
+      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
+      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
+      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
+      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
+      ]
+      
+      },
+  
+    
+    ]
+    
+    },
 
-  document.getElementById("submodal-titulo").textContent = sub.titulo;
-  document.getElementById("submodal-texto").innerHTML = `
-    <p>${sub.descripcion || "Sin descripción disponible."}</p>
+
+  {
+    id:1,
+    titulo:"Jarrón",
+    altura:"8.4 cm",
+    diametro:"13.2 cm",
+    precio:"$55.000",
+    
+    imagenes:[
+    
+    {
+    titulo:"Mundial 2026",
+    src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
+    
+    info:[
+    "Maple",
+    "Clutch",
+    "Sayu",
+    "Estadio Benz",
+    "Estadio BC Place",
+    "Estadio Azteca",
+    "Bandera Colombia",
+    "Bandera EEUU",
+    "Bandera Canada",
+    "Bandera México",
+    "Balon",
+    "Trofeo"
+    ],
+    
+    detalles:[
+    "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
+    "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
+    "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
+    "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
+    ]
+    
+    },
+    
+    {
+    titulo:"Publicidad",
+    src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
+    
+    info:[
+    "Logotipo de la empresa",
+    "Dirección",
+    "Productos"
+    ],
+    
+    detalles:[
+    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
+    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
+    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
+    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
+    ]
+    
+    },
+
+    
+    
+    
+    ]
+    
+    },
+    {
+      id:1,
+      titulo:"Jarrón",
+      altura:"8.4 cm",
+      diametro:"13.2 cm",
+      precio:"$55.000",
+      
+      imagenes:[
+      
+      {
+      titulo:"Mundial 2026",
+      src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
+      
+      info:[
+      "Maple",
+      "Clutch",
+      "Sayu",
+      "Estadio Benz",
+      "Estadio BC Place",
+      "Estadio Azteca",
+      "Bandera Colombia",
+      "Bandera EEUU",
+      "Bandera Canada",
+      "Bandera México",
+      "Balon",
+      "Trofeo"
+      ],
+      
+      detalles:[
+      "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
+      "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
+      "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
+      "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
+      ]
+      
+      },
+      
+      {
+      titulo:"Publicidad",
+      src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
+      
+      info:[
+      "Logotipo de la empresa",
+      "Dirección",
+      "Productos"
+      ],
+      
+      detalles:[
+      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
+      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
+      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
+      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
+      ]
+      
+      },
+  
+      
+      
+      
+      ]
+      
+      },
+
+      {
+        id:1,
+        titulo:"Jarrón",
+        altura:"8.4 cm",
+        diametro:"13.2 cm",
+        precio:"$55.000",
+        
+        imagenes:[
+        
+        {
+        titulo:"Mundial 2026",
+        src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
+        
+        info:[
+        "Maple",
+        "Clutch",
+        "Sayu",
+        "Estadio Benz",
+        "Estadio BC Place",
+        "Estadio Azteca",
+        "Bandera Colombia",
+        "Bandera EEUU",
+        "Bandera Canada",
+        "Bandera México",
+        "Balon",
+        "Trofeo"
+        ],
+        
+        detalles:[
+        "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
+        "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
+        "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
+        "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
+        ]
+        
+        },
+        
+        {
+        titulo:"Publicidad",
+        src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
+        
+        info:[
+        "Logotipo de la empresa",
+        "Dirección",
+        "Productos"
+        ],
+        
+        detalles:[
+        "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
+        "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
+        "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
+        "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
+        ]
+        
+        },
+    
+        
+        
+        
+        ]
+        
+        },
+
+
+        {
+          id:1,
+          titulo:"Jarrón",
+          altura:"8.4 cm",
+          diametro:"13.2 cm",
+          precio:"$55.000",
+          
+          imagenes:[
+          
+          {
+          titulo:"Mundial 2026",
+          src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
+          
+          info:[
+          "Maple",
+          "Clutch",
+          "Sayu",
+          "Estadio Benz",
+          "Estadio BC Place",
+          "Estadio Azteca",
+          "Bandera Colombia",
+          "Bandera EEUU",
+          "Bandera Canada",
+          "Bandera México",
+          "Balon",
+          "Trofeo"
+          ],
+          
+          detalles:[
+          "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
+          "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
+          "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
+          "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
+          ]
+          
+          },
+          
+          {
+          titulo:"Publicidad",
+          src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
+          
+          info:[
+          "Logotipo de la empresa",
+          "Dirección",
+          "Productos"
+          ],
+          
+          detalles:[
+          "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
+          "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
+          "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
+          "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
+          ]
+          
+          },
+      
+          
+          
+          
+          ]
+          
+          },
+    
+  
+
+      
+    
+    
+  
+  ];
+  
+  
+  // Matriz principal
+  
+  function renderGalerias(){
+  
+  contenedorGalerias.innerHTML="";
+  
+  galeriaData.forEach(item=>{
+  
+  const card=document.createElement("div");
+  card.className="modelo";
+  
+  card.innerHTML=`
+  
+  <div class="img-contenedor">
+  <img src="${item.imagenes[0].src}" loading="lazy">
+  </div>
+  
+  <h3>${item.titulo}</h3>
+  
+  <button class="btn-modelo" onclick="abrirModal(${item.id})">
+  Ver Modelos
+  </button>
+  
   `;
-}
-
-
-function cerrarSubModal() {
-  submodal.classList.remove("mostrar");
-  setTimeout(() => (submodal.style.display = "none"), 200);
-}
-
-
-// =======================================================
-// ❌ CERRAR MODAL PRINCIPAL
-// =======================================================
-function cerrarModal() {
-  modal.style.display = "none";
-  modal.classList.remove("mostrar");
-}
-
-// =======================================================
-// 🖼️ LIGHTBOX DE IMAGEN
-// =======================================================
-function abrirLightbox(src) {
-  const lightbox = document.createElement("div");
-  lightbox.className = "lightbox";
-  lightbox.innerHTML = `<img src="${src}" alt="Imagen ampliada">`;
-  document.body.appendChild(lightbox);
-  lightbox.addEventListener("click", () => lightbox.remove());
-}
-
-// =======================================================
-// ⌨️ CERRAR CON TECLA ESC
-// =======================================================
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    cerrarModal();
-    cerrarSubModal();
-  }
-});
-// =======================================================
-// 🧩 RENDERIZAR GALERÍAS PRINCIPALES EN LA PÁGINA
-// =======================================================
-function renderGalerias() {
-  const contenedor = document.getElementById("galerias-container");
-  if (!contenedor) return;
-
-  contenedor.innerHTML = ""; // limpiar contenido previo
-
-  galeriaData.forEach(item => {
-    const galeriaDiv = document.createElement("div");
-    galeriaDiv.className = "galeria";
-    galeriaDiv.dataset.galeria = item.id;
-
-    // Imagen de portada (tomamos la primera de su subgalería)
-    const portada =
-      subGalerias[item.id]?.[0]?.imagenes?.[0] || "./imagenes/placeholder.jpg";
-
-    const img = document.createElement("img");
-    img.src = portada;
-    img.alt = item.titulo;
-    galeriaDiv.appendChild(img);
-
-    // Título
-    const titulo = document.createElement("div");
-    titulo.innerHTML = `<h4>${item.titulo}</h4>`;
-    galeriaDiv.appendChild(titulo);
-
-    // Botón
-    const btns = document.createElement("div");
-    btns.className = "botones1";
-
-    const verBtn = document.createElement("button");
-    verBtn.textContent = "Ver Modelos";
-    verBtn.addEventListener("click", () => abrirModal(item.id));
-    btns.appendChild(verBtn);
-
-    galeriaDiv.appendChild(btns);
-    contenedor.appendChild(galeriaDiv);
+  
+  contenedorGalerias.appendChild(card);
+  
   });
-}
-
-// Ejecutar automáticamente al cargar la página
-document.addEventListener("DOMContentLoaded", renderGalerias);
+  
+  }
+  
+  
+  //Abrir Modal
+  
+  window.abrirModal = function(id){
+  
+  const item=galeriaData.find(g=>g.id===id);
+  if(!item) return;
+  
+  modalItemActual=item;
+  imagenesActuales=item.imagenes;
+  indiceImagenActual=0;
+  
+  modalGaleriaImg.src=imagenesActuales[0].src;
+  
+  actualizarTitulo(item,imagenesActuales[0].titulo);
+  
+  crearMiniaturas(item);
+  
+  mostrarDetalles(0);
+  
+  modal.style.display="flex";
+  
+  }
+  
+  
+  //Crear Miniaturas
+  
+  function crearMiniaturas(item){
+  
+  miniaturasContainer.innerHTML="";
+  
+  item.imagenes.forEach((img,i)=>{
+  
+  const mini=document.createElement("img");
+  
+  mini.src=img.src;
+  mini.title = img.titulo;
+  mini.style.width="70px";
+  mini.style.cursor="pointer";
+  mini.style.margin="5px";
+  
+  mini.onclick=()=>{
+  
+  indiceImagenActual=i;
+  
+  modalGaleriaImg.src=imagenesActuales[i].src;
+  
+  actualizarTitulo(item,imagenesActuales[i].titulo);
+  
+  mostrarDetalles(i);
+  
+  };
+  
+  miniaturasContainer.appendChild(mini);
+  
+  });
+  
+  }
+  
+  
+  // ===== TITULO =====
+  
+  function actualizarTitulo(item,titulo){
+  
+  modalTituloEl.innerHTML=`
+  
+  <h3>${titulo}</h3>
+  
+  <p>Altura: ${item.altura}</p>
+  
+  <p>Diámetro: ${item.diametro}</p>
+  
+  <p>Precio: ${item.precio}</p>
+  
+  `;
+  
+  }
+  
+  
+  // ===== TOOLTIP =====
+  
+  modalGaleriaImg.addEventListener("mouseenter", ()=>{
+  
+  const info = imagenesActuales[indiceImagenActual].info || [];
+  
+  tooltipLista.innerHTML="";
+  
+  const mitad=Math.ceil(info.length/2);
+  
+  const contenedorColumnas=document.createElement("div");
+  
+  contenedorColumnas.style.display="grid";
+  contenedorColumnas.style.gridTemplateColumns="1fr 1fr";
+  contenedorColumnas.style.columnGap="30px";
+  
+  const col1=document.createElement("div");
+  const col2=document.createElement("div");
+  
+  info.forEach((texto,i)=>{
+  
+  const item=document.createElement("div");
+  
+  item.innerHTML=`<span style="color:#00c853;font-weight:bold;margin-right:6px;">✔</span>${texto}`;
+  
+  item.style.whiteSpace="nowrap";
+  
+  if(i<mitad){
+  
+  col1.appendChild(item);
+  
+  }else{
+  
+  col2.appendChild(item);
+  
+  }
+  
+  });
+  
+  contenedorColumnas.appendChild(col1);
+  contenedorColumnas.appendChild(col2);
+  
+  tooltipLista.appendChild(contenedorColumnas);
+  
+  tooltip.classList.add("visible");
+  
+  });
+  
+  
+  modalGaleriaImg.addEventListener("mouseleave", ()=>{
+  
+  tooltip.classList.remove("visible");
+  
+  });
+  
+  
+  // ===== DETALLES =====
+  
+  function mostrarDetalles(index){
+  
+  const contenedor=document.getElementById("modal-detalles");
+  
+  contenedor.innerHTML="";
+  
+  const detalles=imagenesActuales[index].detalles || [];
+  
+  detalles.forEach(src=>{
+  
+  const img=document.createElement("img");
+  
+  img.src=src;
+  
+  
+  
+  contenedor.appendChild(img);
+  
+  });
+  
+  }
+  
+  
+  // ===== CERRAR MODAL =====
+  
+  window.cerrarModal=function(){
+  
+  modal.style.display="none";
+  
+  modalGaleriaImg.src="";
+  
+  modalTituloEl.innerHTML="";
+  
+  };
+  
+  
+  // ===== INICIAR =====
+  
+  renderGalerias();
+  
+  });
