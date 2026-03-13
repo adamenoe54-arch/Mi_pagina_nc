@@ -58,7 +58,7 @@ nav ul{
 
 nav ul li a{
   text-decoration:none;
-  color:#333;
+  color:white;
   font-weight:600;
 }
 
@@ -257,14 +257,12 @@ button:hover {
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   text-align: center;
-  max-width: 900px;
-  font-size: 1.3rem;
+  max-width: 1000px;
   line-height: 1.5;
-  
-font-family:Arial, sans-serif;   /* tipo de letra */
-font-weight:normal;              /* quita el bold */
-font-size:12px;
-}
+  font-family:Arial, sans-serif;   /* tipo de letra */
+  font-weight:normal;              /* quita el bold */
+  font-size:15px;
+  }
 
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
