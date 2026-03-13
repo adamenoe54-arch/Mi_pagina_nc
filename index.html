@@ -34,7 +34,7 @@
 
 <!-- Duplicadas para que no haya corte -->
 
-<img src="imagenes/imagenes/2.1.1.4._mundial/2.1.1.4.1._isometrico.webp" alt="" loading="lazy">
+<img src="imagenes/2.1.1.4._mundial/2.1.1.4.1._isometrico.webp" alt="" loading="lazy">
 <img src="imagenes/1.1.1._flores/1.1.1.1._isometrico.webp" alt="" loading="lazy">
 <img src="imagenes/1.2.1._flores/1.2.1.1._isometrico.webp" alt="" loading="lazy">
 <img src="imagenes/3.1.1.1._condor/3.1.1.1.1._isometrico.webp" alt="" loading="lazy">
@@ -45,91 +45,54 @@
 <div class="productos">
   <h4> Productos elaborados en poliestireno, impresión digital autoadhesivo laminado, para un mejor acabado y durabilidad'</h4>
 </div>
- 
+ <!-- 🌈 GALERÍA PRINCIPAL -->
 <div class="matriz-galerias" id="galerias-container"></div>
-<!-- 🌈 MODAL -->
-<!-- 🌈 MODAL PRINCIPAL -->
+<!-- MODAL PRINCIPAL -->
 <div id="modal" class="modal">
   <div class="modal-contenido">
     <span class="cerrar" onclick="cerrarModal()">&times;</span>
-    <h2 id="modal-titulo"></h2>
-    
+    <div id="modal-titulo"></div>
     <div id="modal-texto"></div>
 
-    <div id="modal-galeria" class="galeria-modal" style="display:none;">
-      <button id="prevModalImg" class="btn-galeria">⟨</button>
-      <img id="modal-galeria-img" src="" alt="Imagen detalle">
-      <button id="nextModalImg" class="btn-galeria">⟩</button>
-    </div>
-  </div>
+    <!-- Contenedor imagen grande -->
+    <div id="modal-galeria" class="galeria-modal">
 
-  <!-- 🧭 SUBMODAL DENTRO DEL MODAL PRINCIPAL -->
-  <div id="submodal" class="submodal">
-    <div class="submodal-contenido">
-      <span class="cerrar-submodal" onclick="cerrarSubModal()">&times;</span>
-      <h2 id="submodal-titulo"></h2>
-      <div id="submodal-texto"></div>
+      <div class="contenedor-imagen">
+
+        <img id="modal-galeria-img">
+        
+        <div id="tooltip-info" class="tooltip-info">
+        <ul id="tooltip-lista"></ul>
+        </div>
+        
+        </div>
+        
+        <div class="indicador-hover">
+        Toca la imagen para ver información
+        </div>
+
+    <!-- Miniaturas -->
+    <div id="modal-detalles"></div>
+
+    <div class="miniaturas-seccion">
+      
+      <div id="modal-miniaturas"></div>
+      <p class="mensaje-miniaturas">
+        Haga clic en las miniaturas para cambiar el modelo
+      </p>
+
+      
+    </div>
+    <!-- Submodal -->
+    <div id="submodal" class="submodal">
+      <div class="submodal-contenido">
+        <span class="cerrar-submodal" onclick="cerrarSubModal()">&times;</span>
+        <h2 id="submodal-titulo"></h2>
+        <div id="submodal-texto"></div>
+      </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
- 
-</div>
-    <div class="tituloPlanes">
-
-    <h2>Galería de Planes</h2>
-    </div>
-
-  <div class="grid-botones">
-    <div>
-      <h3>Básico</h3>
-      <p class="precio">$30.000</p>
-      <ul>
-        <li>Diseño sencillo</li>
-        <li>1 producto personalizado</li>
-        <li>Entrega en 3 días</li>
-      </ul>
-      <button onclick="abrirModal('Plan A', 'Incluye un diseño sencillo con 1 producto personalizado.')">Plan A</button>
-    </div>
-
-    <div>
-      <h3>Estándar</h3>
-      <p class="precio">$60.000</p>
-      <ul>
-        <li>3 productos personalizados</li>
-        <li>Diseño detallado</li>
-        <li>Entrega en 2 días</li>
-      </ul>
-      <button onclick="abrirModal('Plan B', 'Diseño detallado y 3 productos personalizados.')">Plan B</button>
-    </div>
-
-    <div>
-      <h3>Premium</h3>
-      <p class="precio">$120.000</p>
-      <ul>
-        <li>5 productos personalizados</li>
-        <li>Diseño exclusivo</li>
-        <li>Entrega en 1 día</li>
-      </ul>
-      <button onclick="abrirModal('Plan C', 'Diseño exclusivo, entrega rápida y soporte premium.')">Plan C</button>
-    </div>
-
-    <div>
-      <h3>Corporativo</h3>
-      <p class="precio">$200.000</p>
-      <ul>
-        <li>Diseño y estrategia</li>
-        <li>Campaña de marketing</li>
-        <li>Atención personalizada</li>
-      </ul>
-      <button onclick="abrirModal('Plan D', 'Servicio corporativo completo con diseño y marketing.')">Plan D</button>
-    </div>
-  </div>
 
 <!-- 🌌 Modal para ampliar imagen -->
 <div id="lightbox" class="lightbox">
