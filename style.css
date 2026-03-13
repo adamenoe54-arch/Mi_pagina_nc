@@ -211,12 +211,16 @@ button:hover {
   color: white;
   padding: 20px;
   margin: 20px auto;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   text-align: center;
   max-width: 900px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.5;
+  
+font-family:Arial, sans-serif;   /* tipo de letra */
+font-weight:normal;              /* quita el bold */
+font-size:12px;
 }
 
 @keyframes gradientMove {
@@ -368,17 +372,7 @@ button:hover {
   from { transform: translateY(50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
-.matriz-galerias {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Fijo a 4 columnas */
-  gap: 20px;
-  padding: 20px;
-  justify-items: center;
-  margin: 20px;
-  background: rgba(255, 255, 255, 0.8);
-  background: rgba(0, 0, 0, 0.4) url("optimized/fondos/marmol.webp") center/cover no-repeat;
-  flex-direction: row;
-}
+
 
 .galeria {
   background-color: white;
@@ -561,11 +555,11 @@ button:hover {
 .modal-contenido {
   border: 5px solid rgba(72, 0, 255, 0.9) !important;
   background: linear-gradient(135deg, rgba(20, 20, 20, 0.95), rgba(234, 192, 192, 0.9)); /*  Degradado interno */
-  color: white;
+  
   padding: 25px;
   border-radius: 16px;
-  max-width: 600px;
-  width: 80%;
+  max-width: 700px;
+  width: 100%;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(255, 255, 255, 0.2);
   animation: aparecer 0.4s ease;
@@ -805,14 +799,7 @@ button:hover {
 
 
 /*  Galería dentro del modal */
-.galeria-modal {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-  position: relative;
-}
+
 
 .galeria-modal img {
   width: 80%;
@@ -821,6 +808,11 @@ button:hover {
   object-fit: contain;
   transition: none;
 }
+.galeria-modal{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  }
 
 .btn-galeria {
   background-color: rgba(255,255,255,0.2);
@@ -1249,3 +1241,350 @@ button:hover {
     transform: translateY(-2px);
   }
   
+#modal-titulo{
+text-align:center;
+line-height:1.5;
+height:auto;
+overflow:visible;
+white-space:normal;
+display:block;
+}
+
+
+.titulo-modal{
+text-align:center;
+margin-bottom:10px;
+}
+
+.titulo-principal{
+font-size:26px;
+font-weight:bold;
+color:#00ffe5;
+margin-bottom:6px;
+}
+
+.titulo-info{
+font-size:16px;
+color:#e6e6e6;
+}
+  
+  #modal-miniaturas img{
+  
+  width:65px;
+  height:65px;
+  object-fit:cover;
+  cursor:pointer;
+  border-radius:6px;
+  border:2px solid transparent;
+  transition:0.3s;
+  
+  }
+  
+  #modal-miniaturas img:hover{
+  transform:scale(1.08);
+  border-color:#00ffe5;
+  
+  }
+  
+  .mini-activa{
+  border-color:#00ffe5;
+  box-shadow:0 0 10px #00ffe5;
+  }
+  
+  
+  #modal-galeria {
+    position: relative;
+    text-align: center;
+  }
+  
+  #modal-galeria img {
+    max-width: 500px;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  #modal-galeria {
+    position: relative;
+    text-align: center;
+  }
+  
+  #modal-galeria img {
+    max-width: 500px;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  #modal-detalles{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:15px;
+    }
+    
+  #modal-miniaturas{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:10px;
+  gap:10px;
+  }
+    
+  .mensaje-miniaturas{
+  text-align:center;
+  font-size:14px;
+  color:#ffcc66;
+  margin-top:15px;
+  margin-bottom:10px;
+  font-style:italic;
+  opacity:0.9;
+  }
+
+    
+  #tooltip-info{
+  position:absolute;
+  background:rgba(0,0,0,0.85);
+  color:white;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.4);
+  display:none;
+  font-size:14px;
+  }
+  
+        
+  #tooltip-info.visible{
+  display:block;
+  }  
+    
+  /* tooltip visible */      
+  .tooltip-info.visible{
+  opacity:1;
+  transform:translateY(0);
+  }
+      
+  .tooltip-info ul{
+  margin:0;
+  padding-left:18px;
+  }
+      
+      
+  .tooltip-info li{
+  margin-bottom:5px;
+  line-height:1.4;
+  white-space:normal;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+  }
+      
+      /* triángulo */
+      
+  .tooltip-info::after{
+  content:"";
+  position:absolute;
+  bottom: -8px;
+  right:20px;
+  border-width:8px;
+  border-style:solid;
+  border-color:transparent transparent rgba(0,0,0,0.85) transparent;
+  }
+         
+  #tooltip-lista li{
+  white-space:nowrap;
+  text-align:left;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:6px;
+  width:100%;
+  }
+       
+  #tooltip-lista li::before{
+  content:"✔";
+  color:#00ff88;
+  position:absolute;
+  left:0;
+  font-weight:bold;
+  margin-right:8px;
+  }
+
+  #tooltip-lista{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px 30px;
+  justify-items:start;   /* items alineados a la izquierda */
+  text-align:left;       /* texto alineado a la izquierda */
+  }
+      
+  .indicador-hover{
+  display:block;
+  text-align:center;
+  margin-top:10px;
+  font-size:15px;
+  color:rgb(221, 221, 221);
+  font-style:italic;
+  background:none;
+  position:static;
+  }
+      
+                        
+  #modal-galeria-img{
+  display:block;
+  max-width:100%;
+  margin:auto;
+  transition:opacity 0.25s;
+  }
+                        
+                        
+  .tooltip-info{
+  position:absolute;
+  }
+
+  .contenedor-imagen{
+  position:relative;
+  text-align:center;
+  display:inline-block;
+  justify-content:center;
+  }
+                                  
+  .modelo img{
+    width:100%;
+    border-radius:6px;
+    max-width:250px;
+    height:auto;
+    display:block;
+    margin:auto;
+    transition:transform 0.3s;
+    }
+    
+    .modelo:hover img{
+    transform:scale(1.05);
+    }
+                            
+  .modelo img:hover{
+  transform:scale(1.05);
+  }
+  .modelo .btn-modelo{
+
+    background:#2e7d32;
+    color:white;
+    
+    border:none;
+    border-radius:6px;
+    
+    padding:6px 14px;
+    
+    font-size:13px;
+    font-weight:400;
+    
+    cursor:pointer;
+    
+    display:inline-block;
+    
+    }
+    
+    .btn-modelo:hover{
+    
+    background:#1b5e20;
+    
+    }
+    
+  .modelo button:hover{
+  background:#1b5e20;
+  }
+
+  .matriz-galerias{
+  display:grid;
+  gap:10px;
+  margin: 10px;
+  max-width:1200px;
+  
+  grid-template-columns: repeat(6, 1fr); /* Fijo a 4 columnas */
+  justify-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  flex-direction: row;
+   }
+                              
+   .modelo{
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+    
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    
+    transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .modelo:hover{
+      transform:translateY(-5px);
+      box-shadow:0 8px 18px rgba(0,0,0,0.25);
+      }
+                              
+                              
+      .img-contenedor{
+        width:100%;
+        height:300px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        
+        overflow:hidden;
+        }  
+        
+        .img-detalle{
+
+          width:120px;
+          margin:5px;
+          
+          transition:transform 0.25s ease;
+          cursor:pointer;
+          
+          }
+          
+          .img-detalle:hover{
+          
+          transform:scale(1.35);
+          
+          position:relative;
+          z-index:20;
+          
+          }
+
+          #modal-detalles img{
+
+            transition: transform 0.25s ease;
+            cursor:pointer;
+            
+            }
+            
+            
+
+            #modal-detalles{
+
+              overflow:visible;
+              
+              }
+
+              
+                
+                
+
+                #modal-detalles img{
+
+                  width:120px;
+                  margin:5px;
+                  cursor:pointer;
+                  transition:all 0.25s ease;
+                  
+                  }
+                  
+                  #modal-detalles img:hover{
+                  
+                  width:160px;
+                  
+                  }
