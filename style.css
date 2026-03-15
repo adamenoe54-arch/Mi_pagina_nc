@@ -64,10 +64,6 @@ nav ul li a{
 
 /* MOSAICO */
 
-.carousel{
-  width:200px;
-  overflow:hidden;
-}
 
 .track{
   display:flex;
@@ -187,13 +183,7 @@ transition: transform 0.3s ease;
   }
 }
 
-/* Responsive: ajusta el tamaño en pantallas pequeñas */
-@media (max-width: 600px) {
-  .track img {
-    width: 200px;
-    height: 130px;
-  }
-}
+
 .carousel:hover .track {
   animation-play-state: paused;
 }
@@ -1309,17 +1299,15 @@ font-size:16px;
 color:#e6e6e6;
 }
   
-  #modal-miniaturas img{
-  
+#modal-miniaturas img{
   width:65px;
-  height:65px;
-  object-fit:cover;
+  height:100px;
+  object-fit:contain;
   cursor:pointer;
   border-radius:6px;
   border:2px solid transparent;
   transition:0.3s;
-  
-  }
+}
   
   #modal-miniaturas img:hover{
   transform:scale(1.08);
@@ -1362,6 +1350,7 @@ color:#e6e6e6;
     justify-content:center;
     flex-wrap:wrap;
     margin-top:15px;
+    overflow:visible;
     }
     
   #modal-miniaturas{
@@ -1568,14 +1557,14 @@ color:#e6e6e6;
                               
       .img-contenedor{
         width:100%;
-        height:300px;
-        
+        height:220px;        /* altura fija */
         display:flex;
         align-items:center;
         justify-content:center;
-        
         overflow:hidden;
-        }  
+        background:#000;
+        border-radius:8px;
+      }  
         
         .img-detalle{
 
@@ -1597,19 +1586,23 @@ color:#e6e6e6;
           }
 
           #modal-detalles img{
-
-            transition: transform 0.25s ease;
+            width:90px;
+            height:120px;
+            object-fit:contain;
+            background:black;
+            margin:6px;
+            border-radius:8px;
             cursor:pointer;
-            
-            }
+            transition:transform 0.2s ease;
+          }
+          
+          #modal-detalles img:hover{
+            transform:scale(1.15);
+          }
             
             
 
-            #modal-detalles{
-
-              overflow:visible;
-              
-              }
+          
 
               
                 
@@ -1645,9 +1638,7 @@ color:#e6e6e6;
                         justify-content:center;
                     }
                     
-                    .carousel{
-                        width:100%;
-                    }
+                    
                     
                     .track{
                         justify-content:center;
@@ -1656,3 +1647,10 @@ color:#e6e6e6;
                     }
 
                     
+                   
+
+    .img-contenedor img{
+      width:100%;
+      height:100%;
+      object-fit:contain;  /* mantiene proporción */
+      }
