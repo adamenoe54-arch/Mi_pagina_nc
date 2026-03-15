@@ -207,12 +207,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
   },
   {
-    id:1,
+    id:2,
     titulo:"Volumen",
     altura:"8.4 cm",
     diametro:"13.2 cm",
-    precio:"$55.000",
-    
+    precio:"$15.000",
+    nota:"Pedido más de 10 Unidades",
     imagenes:[
     
     {
@@ -222,16 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
     info:[
     "Maple",
     "Clutch",
-    "Sayu",
-    "Estadio Benz",
-    "Estadio BC Place",
-    "Estadio Azteca",
-    "Bandera Colombia",
-    "Bandera EEUU",
-    "Bandera Canada",
-    "Bandera México",
-    "Balon",
-    "Trofeo"
     ],
     
     detalles:[
@@ -244,306 +234,190 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     
     {
-    titulo:"Mar del Plata",
-    src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
+    titulo:"Mundial",
+    src:"imagenes/2.2.1.3._mundial/2.2.1.3.1._isometrico.webp",
     
     info:[
-    "Logotipo de la empresa",
+    "ffff",
     "Dirección",
     "Productos"
     ],
     
     detalles:[
-    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
-    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
-    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
-    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
+    "imagenes/2.2.1.3._mundial/2.2.1.3.2._frontal.webp",
+    "imagenes/2.2.1.3._mundial/2.2.1.3.3._lateral.webp",
+    "imagenes/2.2.1.3._mundial/2.2.1.3.4._superior.webp",
+    "imagenes/2.2.1.3._mundial/2.2.1.3.5._inferior.webp"
     ]
     
     },
   
-    {
-      titulo:"Escritores_Colombianos",
-      src:"imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.1._isometrico.webp",
-      
-      info:[
-      "Logotipo de la empresa",
-      "Dirección",
-      "Productos"
-      ],
-      
-      detalles:[
-      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
-      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
-      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
-      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
-      ]
-      
-      },
   
     
     ]
     
     },
 
-
-  {
-    id:1,
-    titulo:"Jarrón",
-    altura:"8.4 cm",
-    diametro:"13.2 cm",
-    precio:"$55.000",
-    
-    imagenes:[
-    
     {
-    titulo:"Mundial 2026",
-    src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
-    
-    info:[
-    "Maple",
-    "Clutch",
-    "Sayu",
-    "Estadio Benz",
-    "Estadio BC Place",
-    "Estadio Azteca",
-    "Bandera Colombia",
-    "Bandera EEUU",
-    "Bandera Canada",
-    "Bandera México",
-    "Balon",
-    "Trofeo"
-    ],
-    
-    detalles:[
-    "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
-    "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
-    "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
-    "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
-    ]
-    
-    },
-    
-    {
-    titulo:"Publicidad",
-    src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
-    
-    info:[
-    "Logotipo de la empresa",
-    "Dirección",
-    "Productos"
-    ],
-    
-    detalles:[
-    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
-    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
-    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
-    "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
-    ]
-    
-    },
-
-    
-    
-    
-    ]
-    
-    },
-    {
-      id:1,
+      id:3,
       titulo:"Jarrón",
-      altura:"8.4 cm",
-      diametro:"13.2 cm",
-      precio:"$55.000",
-      
+      altura:"26 cm",
+      diametro:"12.2 cm",
+      precio:"$65.000",
+      nota:"Pedido más de 10 Unidades",
       imagenes:[
       
       {
-      titulo:"Mundial 2026",
+      titulo:"Flores",
       src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
       
       info:[
       "Maple",
       "Clutch",
-      "Sayu",
-      "Estadio Benz",
-      "Estadio BC Place",
-      "Estadio Azteca",
-      "Bandera Colombia",
-      "Bandera EEUU",
-      "Bandera Canada",
-      "Bandera México",
-      "Balon",
-      "Trofeo"
       ],
       
       detalles:[
-      "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
-      "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
-      "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
-      "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
+      "imagenes/1.1.1._flores/1.1.1.2._frontal.webp",
+      "imagenes/1.1.1._flores/1.1.1.3._lateral.webp",
+      "imagenes/1.1.1._flores/1.1.1.4._superior.webp",
+      "imagenes/1.1.1._flores/1.1.1.5._inferior.webp"
       ]
       
       },
       
-      {
-      titulo:"Publicidad",
-      src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
       
-      info:[
-      "Logotipo de la empresa",
-      "Dirección",
-      "Productos"
-      ],
-      
-      detalles:[
-      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
-      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
-      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
-      "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
-      ]
-      
-      },
-  
-      
-      
+    
       
       ]
       
       },
 
       {
-        id:1,
-        titulo:"Jarrón",
-        altura:"8.4 cm",
-        diametro:"13.2 cm",
-        precio:"$55.000",
-        
+        id:4,
+        titulo:"Solitario",
+        altura:"22 cm",
+        diametro:"84 cm",
+        precio:"$50.000",
+        nota:"Pedido más de 10 Unidades",
         imagenes:[
         
         {
-        titulo:"Mundial 2026",
-        src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
+        titulo:"Flores",
+        src:"imagenes/1.2.1._flores/1.2.1.1._isometrico.webp",
         
         info:[
         "Maple",
         "Clutch",
-        "Sayu",
-        "Estadio Benz",
-        "Estadio BC Place",
-        "Estadio Azteca",
-        "Bandera Colombia",
-        "Bandera EEUU",
-        "Bandera Canada",
-        "Bandera México",
-        "Balon",
-        "Trofeo"
         ],
         
         detalles:[
-        "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
-        "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
-        "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
-        "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
+        "imagenes/1.2.1._flores/1.2.1.2._frontal.webp",
+        "imagenes/1.2.1._flores/1.2.1.3._lateral.webp",
+        "imagenes/1.2.1._flores/1.2.1.4._superior.webp",
+        "imagenes/1.2.1._flores/1.2.1.5._inferior.webp"
         ]
         
         },
         
-        {
-        titulo:"Publicidad",
-        src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
         
-        info:[
-        "Logotipo de la empresa",
-        "Dirección",
-        "Productos"
-        ],
-        
-        detalles:[
-        "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
-        "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
-        "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
-        "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
-        ]
-        
-        },
-    
-        
-        
+      
         
         ]
         
         },
 
-
         {
-          id:1,
-          titulo:"Jarrón",
-          altura:"8.4 cm",
-          diametro:"13.2 cm",
-          precio:"$55.000",
-          
+          id:5,
+          titulo:"PortaLapiz",
+          altura:"22 cm",
+          diametro:"84 cm",
+          precio:"$50.000",
+          nota:"Pedido más de 10 Unidades",
           imagenes:[
           
           {
-          titulo:"Mundial 2026",
-          src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
+          titulo:"Condor",
+          src:"imagenes/3.1.1.1._condor/3.1.1.1.1._isometrico.webp",
           
           info:[
           "Maple",
           "Clutch",
-          "Sayu",
-          "Estadio Benz",
-          "Estadio BC Place",
-          "Estadio Azteca",
-          "Bandera Colombia",
-          "Bandera EEUU",
-          "Bandera Canada",
-          "Bandera México",
-          "Balon",
-          "Trofeo"
           ],
           
           detalles:[
-          "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
-          "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
-          "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
-          "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
+          "imagenes/3.1.1.1._condor/3.1.1.1.2._frontal.webp",
+          "imagenes/3.1.1.1._condor/3.1.1.1.3._lateral.webp",
+          "imagenes/3.1.1.1._condor/3.1.1.1.4._superior.webp",
+          "imagenes/3.1.1.1._condor/3.1.1.1.5._inferior.webp"
           ]
           
           },
-          
-          {
-          titulo:"Publicidad",
-          src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
-          
-          info:[
-          "Logotipo de la empresa",
-          "Dirección",
-          "Productos"
-          ],
-          
-          detalles:[
-          "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
-          "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
-          "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
-          "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
-          ]
-          
-          },
-      
-          
-          
-          
-          ]
-          
-          },
-    
-  
 
+          {
+            titulo:"Frutas",
+            src:"imagenes/3.1.1.2._frutas/3.1.1.2.1._isometrico.webp",
+            
+            info:[
+            "Maple",
+            "Clutch",
+            ],
+            
+            detalles:[
+            "imagenes/3.1.1.2._frutas/3.1.1.2.2._frontal.webp",
+            "imagenes/3.1.1.2._frutas/3.1.1.2.3._lateral.webp",
+            "imagenes/3.1.1.2._frutas/3.1.1.2.4._superior.webp",
+            "imagenes/3.1.1.2._frutas/3.1.1.2.5._inferior.webp"
+            ]
+            
+            },
+            
+          
+          
+        
+          
+          ]
+          
+          },
+
+          {
+            id:6,
+            titulo:"Volumen",
+            altura:"7 cm",
+            diametro:"7 cm",
+            precio:"$15.000",
+            nota:"Pedido más de 10 Unidades",
+            imagenes:[
+            
+            {
+            titulo:"Dollar",
+            src:"imagenes/3.2.1.1._dollar/3.2.1.1.1._isometrico.webp",
+            
+            info:[
+            "Maple",
+            "Clutch",
+            ],
+            
+            detalles:[
+            "imagenes/3.2.1.1._dollar/3.2.1.1.2._frontal.webp",
+            "imagenes/3.2.1.1._dollar/3.2.1.1.3._lateral.webp",
+            "imagenes/3.2.1.1._dollar/3.2.1.1.4._superior.webp",
+            "imagenes/3.2.1.1._dollar/3.2.1.1.5._inferior.webp"
+            ]
+            
+            },
+  
+            
+            
+            
+          
+            
+            ]
+            
+            },
+        
       
     
-    
+      
   
   ];
   
@@ -652,6 +526,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <p>Diámetro: ${item.diametro}</p>
   
   <p>Precio: ${item.precio}</p>
+  <p>Nota: ${item.nota}</p>
   
   `;
   
