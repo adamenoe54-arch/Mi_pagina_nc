@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   titulo:"Portalápiz",
   altura:"8.4 cm",
   diametro:"13.2 cm",
-  precio:"$55.000",
+  precio:"$40.000",
   
   imagenes:[
   
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     altura:"8.4 cm",
     diametro:"13.2 cm",
     precio:"$15.000",
-    nota:"Pedido más de 10 Unidades",
+    
     imagenes:[
     
     {
@@ -263,8 +263,8 @@ document.addEventListener("DOMContentLoaded", () => {
       titulo:"Jarrón",
       altura:"26 cm",
       diametro:"12.2 cm",
-      precio:"$65.000",
-      nota:"Pedido más de 10 Unidades",
+      precio:"$60.000",
+      
       imagenes:[
       
       {
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
         altura:"22 cm",
         diametro:"84 cm",
         precio:"$50.000",
-        nota:"Pedido más de 10 Unidades",
+        
         imagenes:[
         
         {
@@ -331,8 +331,8 @@ document.addEventListener("DOMContentLoaded", () => {
           titulo:"PortaLapiz",
           altura:"22 cm",
           diametro:"84 cm",
-          precio:"$50.000",
-          nota:"Pedido más de 10 Unidades",
+          precio:"$30.000",
+          
           imagenes:[
           
           {
@@ -526,7 +526,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <p>Diámetro: ${item.diametro}</p>
   
   <p>Precio: ${item.precio}</p>
-  <p>Nota: ${item.nota}</p>
+  
   
   `;
   
