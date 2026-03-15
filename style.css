@@ -1747,4 +1747,10 @@ color:#e6e6e6;
           cursor:not-allowed;
           }
 
-          
+          .envio{
+            background:#f1f1f1;
+            padding:10px;
+            border-radius:6px;
+            margin-top:10px;
+            font-weight:bold;
+            }
