@@ -632,3 +632,60 @@ document.addEventListener("DOMContentLoaded", () => {
   renderGalerias();
   
   });
+
+  document.getElementById("form-contacto").addEventListener("submit", function(e){
+
+    e.preventDefault();
+    
+    emailjs.sendForm(
+    'service_gczqlim',
+    'template_3uobaym',
+    this
+    ).then(function(){
+    
+    alert("Mensaje enviado correctamente");
+    
+    }, function(error){
+    
+    alert("Error al enviar el mensaje");
+    
+    });
+    
+    });
+
+    const form = document.getElementById("form-contacto");
+const mensaje = document.getElementById("mensaje-envio");
+const boton = document.getElementById("btn-enviar");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+boton.disabled = true;
+boton.textContent = "Enviando...";
+
+emailjs.sendForm(
+'TU_SERVICE_ID',
+'TU_TEMPLATE_ID',
+this
+).then(function(){
+
+mensaje.textContent = "✅ Mensaje enviado correctamente";
+mensaje.className = "mensaje-envio mensaje-exito";
+
+form.reset();
+
+boton.disabled = false;
+boton.textContent = "Enviar mensaje";
+
+}, function(){
+
+mensaje.textContent = "❌ Error al enviar el mensaje";
+mensaje.className = "mensaje-envio mensaje-error";
+
+boton.disabled = false;
+boton.textContent = "Enviar mensaje";
+
+});
+
+});

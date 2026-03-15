@@ -97,10 +97,44 @@
   <span class="cerrar" onclick="cerrarLightbox()">&times;</span>
   <img id="lightbox-img" src="" alt="Imagen ampliada">
 </div>
+</div>
+</div>
+<section id="contacto">
 
-  
+  <h2>Contacto</h2>
 
+  <div class="contacto-info">
+    <p>📧 Correo: adamenoe54@gmail.com</p>
+    <p>📞 whatsapp: +3214051220</p>
+    <p>📍 Ciudad: Sogamoso, Colombia</p>
+  </div>
+
+  <form id="form-contacto">
+
+    <input type="text" name="name" placeholder="Tu nombre" required>
+    
+    <input type="email" name="email" placeholder="Tu correo" required>
+    
+    <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
+    
+    <button type="submit">Enviar mensaje</button>
+    
+    </form>
+    <p id="mensaje-envio" class="mensaje-envio"></p>
+
+</section> 
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("BUbWKu6RxRiLvu8c1");
+})();
+</script>
   <script src="script.js"></script>
+
 </body>
 </html>
 

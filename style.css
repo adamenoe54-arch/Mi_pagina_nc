@@ -1654,3 +1654,97 @@ color:#e6e6e6;
       height:100%;
       object-fit:contain;  /* mantiene proporción */
       }
+
+      #contacto{
+        max-width:600px;
+        margin:auto;
+        padding:40px 20px;
+        text-align:center;
+        color:black;
+        background:white;
+      }
+      
+      #contacto h2{
+        margin-bottom:20px;
+      }
+      
+      .contacto-info{
+        margin-bottom:20px;
+        font-size:16px;
+      }
+      
+      #form-contacto{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+      }
+      
+      #form-contacto input,
+      #form-contacto textarea{
+        padding:10px;
+        border-radius:6px;
+        border:1px solid #ccc;
+        font-size:14px;
+      }
+      
+      #form-contacto textarea{
+        min-height:120px;
+        resize:vertical;
+      }
+      
+      #form-contacto button{
+        background:#333;
+        color:white;
+        border:none;
+        padding:12px;
+        border-radius:6px;
+        cursor:pointer;
+        transition:0.3s;
+      }
+      
+      #form-contacto button:hover{
+        background:#555;
+      }
+
+      .whatsapp-float{
+        position:fixed;
+        bottom:20px;
+        right:20px;
+        background:#25D366;
+        color:white;
+        font-size:28px;
+        width:60px;
+        height:60px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:50%;
+        text-decoration:none;
+        box-shadow:0 4px 10px rgba(0,0,0,0.3);
+        transition:0.3s;
+        z-index:999;
+        }
+        
+        .whatsapp-float:hover{
+        transform:scale(1.1);
+        }
+
+        .mensaje-envio{
+          margin-top:10px;
+          font-weight:bold;
+          }
+          
+          .mensaje-exito{
+          color:#2ecc71;
+          }
+          
+          .mensaje-error{
+          color:#e74c3c;
+          }
+          
+          #btn-enviar:disabled{
+          background:#999;
+          cursor:not-allowed;
+          }
+
+          
