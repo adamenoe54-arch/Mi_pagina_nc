@@ -107,11 +107,11 @@ nav a:hover {
 
 .carousel {
   flex:1;
-  display: flex;
-  width: 100%;
-  max-width: 800px;
-  overflow: hidden;
-  border-radius: 10px;
+  display:flex;
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
+  border-radius:10px;
 }
 
 .track {
@@ -1542,6 +1542,13 @@ width:160px;
         height:50px;
         font-size:26px;
         }
+        
+          .carousel{
+          width:100%;
+          max-width:100%;
+          }
+          
+         
     }
 
 .img-contenedor img{
