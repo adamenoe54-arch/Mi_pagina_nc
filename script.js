@@ -272,8 +272,8 @@ document.addEventListener("DOMContentLoaded", () => {
       src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
       
       info:[
-      "Maple",
-      "Clutch",
+      "imagen flor individual",
+      "fondo degradado color gris",
       ],
       
       detalles:[
@@ -306,9 +306,9 @@ document.addEventListener("DOMContentLoaded", () => {
         src:"imagenes/1.2.1._flores/1.2.1.1._isometrico.webp",
         
         info:[
-        "Maple",
-        "Clutch",
-        ],
+          "imagen flor individual",
+          "fondo degradado color gris",
+          ],
         
         detalles:[
         "imagenes/1.2.1._flores/1.2.1.2._frontal.webp",
@@ -340,8 +340,8 @@ document.addEventListener("DOMContentLoaded", () => {
           src:"imagenes/3.1.1.1._condor/3.1.1.1.1._isometrico.webp",
           
           info:[
-          "Maple",
-          "Clutch",
+          "condor",
+          "paisaje Laguna de Tota",
           ],
           
           detalles:[
@@ -358,8 +358,11 @@ document.addEventListener("DOMContentLoaded", () => {
             src:"imagenes/3.1.1.2._frutas/3.1.1.2.1._isometrico.webp",
             
             info:[
-            "Maple",
-            "Clutch",
+            "platanos",
+            "uvas",
+            "sandia",
+            "manzana",
+            "fresas",
             ],
             
             detalles:[
@@ -393,8 +396,8 @@ document.addEventListener("DOMContentLoaded", () => {
             src:"imagenes/3.2.1.1._dollar/3.2.1.1.1._isometrico.webp",
             
             info:[
-            "Maple",
-            "Clutch",
+            "imagen de un dolar",
+            
             ],
             
             detalles:[
