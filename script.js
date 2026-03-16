@@ -17,22 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // ===== DATOS DE LAS GALERIAS =====
   
-  const galeriaData = [
+const galeriaData = [
   
   {
   //portalapiz_14_caras  
-  id:1,
-  titulo:"No.1 - Portalápiz",
-  altura:"8.4 cm",
-  diametro:"13.2 cm",
-  precio:"$40.000",
+    id:1,
+    titulo:"No.1 - Portalápiz",
+    altura:"8.4 cm",
+    diametro:"13.2 cm",
+    precio:"$45.000",
   
-  imagenes:[
+    imagenes:[
   
-  //miniatura_portalapiz_mundial 
-  {
-  titulo:"Mundial 2026",
-  src:"imagenes/2.1.1.4._mundial/2.1.1.4.1._isometrico.webp",
+      //miniatura_portalapiz_mundial 
+        {
+          titulo:"Mundial 2026",
+          src:"imagenes/2.1.1.4._mundial/2.1.1.4.1._isometrico.webp",
   
   info:[
   "Maple",
@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
   "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
   "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
   ]
-  
   },
   
   {
@@ -94,8 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Tomás Carrasquilla",
     "José Asunción Silva",
     "Fernando Vallejo"
-    
-    
+       
     ],
     
     detalles:[
@@ -154,9 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Nikola Tesla",
         "Ernest Rutherford",
         "Godofredo Leibniz",
-        
-        
-        
         ],
         
         detalles:[
@@ -185,9 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Pablo Picasso",
           "Rembrandt",
           "Vincent van Gogh",
-          
-          
-          
+                 
           ],
           
           detalles:[
@@ -198,12 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ]
           
           },
-      
-    
-  
-
-  
-  ]
+   ]
   
   },
   {
@@ -211,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     titulo:"Volumen",
     altura:"4.4 cm",
     diametro:"7.2 cm",
-    precio:"$15.000",
+    precio:"$20.000",
     
     imagenes:[
     
@@ -249,13 +237,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "imagenes/2.2.1.3._mundial/2.2.1.3.4._superior.webp",
     "imagenes/2.2.1.3._mundial/2.2.1.3.5._inferior.webp"
     ]
-    
     },
-  
-  
-    
     ]
-    
     },
 
     {
@@ -263,10 +246,9 @@ document.addEventListener("DOMContentLoaded", () => {
       titulo:"Jarrón",
       altura:"26 cm",
       diametro:"12.2 cm",
-      precio:"$60.000",
+      precio:"$65.000",
       
       imagenes:[
-      
       {
       titulo:"Flores",
       src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
@@ -282,14 +264,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "imagenes/1.1.1._flores/1.1.1.4._superior.webp",
       "imagenes/1.1.1._flores/1.1.1.5._inferior.webp"
       ]
-      
       },
-      
-      
-    
-      
       ]
-      
       },
 
       {
@@ -297,10 +273,9 @@ document.addEventListener("DOMContentLoaded", () => {
         titulo:"Solitario",
         altura:"22 cm",
         diametro:"8.4 cm",
-        precio:"$50.000",
+        precio:"$55.000",
         
         imagenes:[
-        
         {
         titulo:"Flores",
         src:"imagenes/1.2.1._flores/1.2.1.1._isometrico.webp",
@@ -316,14 +291,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "imagenes/1.2.1._flores/1.2.1.4._superior.webp",
         "imagenes/1.2.1._flores/1.2.1.5._inferior.webp"
         ]
-        
         },
-        
-        
-      
-        
         ]
-        
         },
 
         {
@@ -331,7 +300,7 @@ document.addEventListener("DOMContentLoaded", () => {
           titulo:"PortaLapiz",
           altura:"10 cm",
           diametro:"8 cm",
-          precio:"$30.000",
+          precio:"$35.000",
           
           imagenes:[
           
@@ -371,23 +340,16 @@ document.addEventListener("DOMContentLoaded", () => {
             "imagenes/3.1.1.2._frutas/3.1.1.2.4._superior.webp",
             "imagenes/3.1.1.2._frutas/3.1.1.2.5._inferior.webp"
             ]
-            
             },
-            
-          
-          
-        
-          
-          ]
-          
-          },
+            ]
+            },
 
           {
             id:6,
             titulo:"Volumen",
             altura:"7 cm",
             diametro:"7 cm",
-            precio:"$15.000",
+            precio:"$20.000",
             nota:"Pedido más de 10 Unidades",
             imagenes:[
             
@@ -406,22 +368,10 @@ document.addEventListener("DOMContentLoaded", () => {
             "imagenes/3.2.1.1._dollar/3.2.1.1.4._superior.webp",
             "imagenes/3.2.1.1._dollar/3.2.1.1.5._inferior.webp"
             ]
-            
             },
-  
-            
-            
-            
-          
-            
             ]
-            
             },
         
-      
-    
-      
-  
   ];
   
   
@@ -455,8 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   }
-  
-  
+   
   //Abrir Modal
   
   window.abrirModal = function(id){
@@ -479,8 +428,7 @@ document.addEventListener("DOMContentLoaded", () => {
   modal.style.display="flex";
   
   }
-  
-  
+    
   //Crear Miniaturas
   
   function crearMiniaturas(item){
@@ -514,8 +462,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   }
-  
-  
+   
   // ===== TITULO =====
   
   function actualizarTitulo(item,titulo){
@@ -530,11 +477,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
   <p>Precio: ${item.precio}</p>
   
-  
   `;
   
   }
-  
   
   // ===== TOOLTIP =====
   
@@ -691,4 +636,11 @@ boton.textContent = "Enviar mensaje";
 
 });
 
+});
+
+const modal = document.getElementById("modal");
+const cerrar = document.getElementById("cerrarModal");
+
+cerrar.addEventListener("click", function() {
+    modal.style.display = "none";
 });
