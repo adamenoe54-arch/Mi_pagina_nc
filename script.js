@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   {
   //portalapiz_14_caras  
   id:1,
-  titulo:"Portalápiz",
+  titulo:"No.1 - Portalápiz",
   altura:"8.4 cm",
   diametro:"13.2 cm",
   precio:"$40.000",
@@ -209,8 +209,8 @@ document.addEventListener("DOMContentLoaded", () => {
   {
     id:2,
     titulo:"Volumen",
-    altura:"8.4 cm",
-    diametro:"13.2 cm",
+    altura:"4.4 cm",
+    diametro:"7.2 cm",
     precio:"$15.000",
     
     imagenes:[
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
         id:4,
         titulo:"Solitario",
         altura:"22 cm",
-        diametro:"84 cm",
+        diametro:"8.4 cm",
         precio:"$50.000",
         
         imagenes:[
@@ -329,8 +329,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           id:5,
           titulo:"PortaLapiz",
-          altura:"22 cm",
-          diametro:"84 cm",
+          altura:"10 cm",
+          diametro:"8 cm",
           precio:"$30.000",
           
           imagenes:[
