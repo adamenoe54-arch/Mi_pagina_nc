@@ -36,18 +36,14 @@ const galeriaData = [
           src:"imagenes/2.1.1.4._mundial/2.1.1.4.1._isometrico.webp",
   
   info:[
-  "Maple",
-  "Clutch",
-  "Sayu",
-  "Estadio Benz",
-  "Estadio BC Place",
-  "Estadio Azteca",
-  "Bandera Colombia",
-  "Bandera EEUU",
-  "Bandera Canada",
-  "Bandera México",
-  "Balon",
-  "Trofeo"
+  "Diseño inspirado en el Mundial 2026",
+  "Elementos icónicos",
+  "Estadios emblemáticos",
+  "Balón oficial ",
+  "Trofeo",
+  "Banderas representativas",
+  "Mascotas",
+  
   ],
   
   detalles:[
@@ -63,9 +59,9 @@ const galeriaData = [
   src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
   
   info:[
-  "Logotipo de la empresa",
-  "Dirección",
-  "Productos"
+  "Publicidad de la empresa",
+  "Ubicación",
+  "Productos a comercializar"
   ],
   
   detalles:[
@@ -210,8 +206,10 @@ const galeriaData = [
     src:"imagenes/2.2.1.1._mar_del_plata/2.2.1.1.1._isometrico.webp",
     
     info:[
-    "Maple",
-    "Clutch",
+    
+  "Diseño corporativo",
+  "información empresarial",
+  "presentacion de productos"
     ],
     
     detalles:[
@@ -228,9 +226,13 @@ const galeriaData = [
     src:"imagenes/2.2.1.3._mundial/2.2.1.3.1._isometrico.webp",
     
     info:[
-    "ffff",
-    "Dirección",
-    "Productos"
+      "Diseño inspirado en el Mundial 2026",
+  "Elementos icónicos",
+  "Estadios emblemáticos",
+  "Balón oficial ",
+  "Trofeo",
+  "Banderas representativas",
+  "Mascotas",
     ],
     
     detalles:[
@@ -258,7 +260,7 @@ const galeriaData = [
       
       info:[
       "imagen flor individual",
-      "fondo degradado color gris",
+      "fondo con degradado en tonos grises",
       ],
       
       detalles:[
