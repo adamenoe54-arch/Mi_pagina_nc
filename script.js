@@ -22,10 +22,11 @@ const galeriaData = [
   {
   //portalapiz_14_caras  
     id:1,
-    titulo:"No.1 - Portalápiz",
+    titulo:"Portalápiz",
     altura:"8.4 cm",
     diametro:"13.2 cm",
     precio:"$45.000",
+    nota:"A partir de 10 unidades",
   
     imagenes:[
   
@@ -200,6 +201,7 @@ const galeriaData = [
     altura:"4.4 cm",
     diametro:"7.2 cm",
     precio:"$20.000",
+    nota:"A partir de 20 unidades",
     
     imagenes:[
     
@@ -247,6 +249,7 @@ const galeriaData = [
       altura:"26 cm",
       diametro:"12.2 cm",
       precio:"$65.000",
+      nota:"A partir de 5 unidades",
       
       imagenes:[
       {
@@ -274,6 +277,7 @@ const galeriaData = [
         altura:"22 cm",
         diametro:"8.4 cm",
         precio:"$55.000",
+        nota:"A partir de 5 unidades",
         
         imagenes:[
         {
@@ -301,6 +305,7 @@ const galeriaData = [
           altura:"10 cm",
           diametro:"8 cm",
           precio:"$35.000",
+          nota:"A partir de 10 unidades",
           
           imagenes:[
           
@@ -350,7 +355,7 @@ const galeriaData = [
             altura:"7 cm",
             diametro:"7 cm",
             precio:"$20.000",
-            nota:"Pedido más de 10 Unidades",
+            nota:"A partir de 20 unidades",
             imagenes:[
             
             {
@@ -383,22 +388,24 @@ const galeriaData = [
   
   galeriaData.forEach(item=>{
   
-  const card=document.createElement("div");
-  card.className="modelo";
-  
-  card.innerHTML=`
-  
-  <div class="img-contenedor">
-  <img src="${item.imagenes[0].src}" loading="lazy">
-  </div>
-  
-  <h3>${item.titulo}</h3>
-  
-  <button class="btn-modelo" onclick="abrirModal(${item.id})">
-  Ver Modelos
-  </button>
-  
-  `;
+    const card=document.createElement("div");
+    card.className="modelo";
+    
+    card.innerHTML=`
+
+    <div class="numero-modelo">No.${item.id}</div>
+    
+    <div class="img-contenedor">
+      <img src="${item.imagenes[0].src}" loading="lazy">
+    </div>
+    
+    <h3>${item.titulo}</h3>
+    
+    <button class="btn-modelo" onclick="abrirModal(${item.id})">
+    Ver Modelos
+    </button>
+    
+    `;
   
   contenedorGalerias.appendChild(card);
   
@@ -476,6 +483,8 @@ const galeriaData = [
   <p>Diámetro: ${item.diametro}</p>
   
   <p>Precio: ${item.precio}</p>
+
+  <p>Nota: ${item.nota}</p>
   
   `;
   

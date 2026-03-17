@@ -1442,10 +1442,10 @@ color:#e6e6e6;
 
 .matriz-galerias{
   display:grid;
-  gap:10px;
+  gap:5px;
   margin: 10px;
   max-width:1200px;
-  grid-template-columns: repeat(6, 1fr); /* Fijo a 4 columnas */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   justify-items: center;
   background: rgba(255, 255, 255, 0.8);
   flex-direction: row;
@@ -1455,6 +1455,7 @@ color:#e6e6e6;
   background:white;
   padding:10px;
   border-radius:10px;
+  max-width: 200px;
   text-align:center;
   box-shadow:0 4px 10px rgba(0,0,0,0.15);
   transition:transform 0.3s, box-shadow 0.3s;
@@ -1691,4 +1692,129 @@ width:160px;
 }
 .close{
   display:none;
+}
+
+.img-contenedor{
+  position: relative;
+}
+
+.numero-modelo{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.modelo{
+  position: relative;
+  overflow: visible; /* 👈 clave */
+}
+
+.numero-modelo{
+  position: absolute;
+  top: -12px;
+  left: 12px;
+  background: #6a5acd;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.img-contenedor{
+  position: relative;
+  padding-top: 20px; /* 👈 espacio para el número */
+}
+
+.numero-modelo{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background: #6a5acd;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  
+  z-index: 5;
+}
+
+.card{
+  position: relative;
+}
+
+/* Contenedor de imagen (zona negra) */
+.img-contenedor{
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 👇 AQUÍ ESTÁ LA MAGIA */
+.numero-modelo{
+  position: absolute;
+  top: 8px; /* 👈 lo baja al borde blanco */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: #6a5acd;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  
+  z-index: 10;
+}
+
+.img-contenedor{
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 25px; /* 👈 CREA LA FRANJA BLANCA */
+}
+
+.card{
+  position: relative;
+}
+
+.numero-modelo{
+  position: absolute;
+  top:5px; /* 👈 ahora sí queda en la zona blanca */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: blue;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  
+  z-index: 10;
+}
+
+.matriz-galerias{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 👈 CLAVE */
+  gap: 20px; /* 👈 ESPACIO REAL Y UNIFORME */
+  padding: 20px;
+}
+
+.modelo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
