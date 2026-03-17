@@ -59,9 +59,9 @@ const galeriaData = [
   src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
   
   info:[
-  "Publicidad de la empresa",
-  "Ubicación",
-  "Productos a comercializar"
+    "Diseño corporativo",
+    "Información empresarial",
+    "Presentación de productos"
   ],
   
   detalles:[
@@ -208,8 +208,8 @@ const galeriaData = [
     info:[
     
   "Diseño corporativo",
-  "información empresarial",
-  "presentacion de productos"
+  "Información empresarial",
+  "Presentación de productos"
     ],
     
     detalles:[
@@ -288,7 +288,7 @@ const galeriaData = [
         
         info:[
           "imagen flor individual",
-          "fondo degradado color gris",
+          "fondo con degradado en tonos grises",
           ],
         
         detalles:[
@@ -316,8 +316,10 @@ const galeriaData = [
           src:"imagenes/3.1.1.1._condor/3.1.1.1.1._isometrico.webp",
           
           info:[
-          "condor",
-          "paisaje Laguna de Tota",
+          "Diseño decorativo",
+          "La grandeza del cóndor",
+          "Paisaje natutal",
+          "Laguna de Tota",
           ],
           
           detalles:[
@@ -334,11 +336,10 @@ const galeriaData = [
             src:"imagenes/3.1.1.2._frutas/3.1.1.2.1._isometrico.webp",
             
             info:[
-            "platanos",
-            "uvas",
-            "sandia",
-            "manzana",
-            "fresas",
+            "Variedad de frutas",
+            "Armonía de colores",
+            "Refleja la frescura",
+            "La forma",
             ],
             
             detalles:[
@@ -365,7 +366,8 @@ const galeriaData = [
             src:"imagenes/3.2.1.1._dollar/3.2.1.1.1._isometrico.webp",
             
             info:[
-            "imagen de un dolar",
+            "Imagen decorativa",
+            "Moneda oficial de EEUU"
             
             ],
             
