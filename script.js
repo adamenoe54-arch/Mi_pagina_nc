@@ -688,3 +688,11 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("Service Worker registrado"))
     .catch(err => console.log("Error:", err));
 }
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  console.log("PWA lista para instalar 🔥");
+  e.preventDefault();
+  deferredPrompt = e;
+});
