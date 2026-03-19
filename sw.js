@@ -1,5 +1,6 @@
 const CACHE_NAME = "mi-app-v1";
 
+// Archivos básicos
 const urlsToCache = [
   "./",
   "./index.html",
@@ -9,6 +10,7 @@ const urlsToCache = [
   "./icono-512.png"
 ];
 
+// 🔧 INSTALAR
 self.addEventListener("install", event => {
   self.skipWaiting();
   event.waitUntil(
@@ -17,13 +19,37 @@ self.addEventListener("install", event => {
   );
 });
 
+// 🔧 ACTIVAR
 self.addEventListener("activate", event => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys.map(key => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
+      )
+    )
+  );
+  self.clients.claim();
 });
 
+// 🔥 FETCH (LA CLAVE)
 self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(event.request)
-      .then(response => response || fetch(event.request))
+    fetch(event.request)
+      .then(response => {
+        // Guarda lo nuevo automáticamente
+        const responseClone = response.clone();
+        caches.open(CACHE_NAME).then(cache => {
+          cache.put(event.request, responseClone);
+        });
+        return response;
+      })
+      .catch(() => {
+        // Si no hay internet → usa cache
+        return caches.match(event.request);
+      })
   );
 });
