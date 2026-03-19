@@ -1,3 +1,4 @@
+console.log("JS FUNCIONANDO");
 document.addEventListener("DOMContentLoaded", () => {
 
   let indiceImagenActual = 0;
@@ -657,3 +658,33 @@ const cerrar = document.getElementById("cerrarModal");
 cerrar.addEventListener("click", function() {
     modal.style.display = "none";
 });
+
+const CACHE_NAME = "mi-app-v1";
+
+const urlsToCache = [
+  "./",
+  "./index.html",
+  "./styles.css",
+  "./script.js",
+  "./icono.png"
+];
+
+self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => response || fetch(event.request))
+  );
+});
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker registrado"))
+    .catch(err => console.log("Error:", err));
+}
