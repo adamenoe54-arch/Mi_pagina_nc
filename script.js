@@ -692,7 +692,32 @@ if ("serviceWorker" in navigator) {
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
-  console.log("PWA lista para instalar 🔥");
   e.preventDefault();
   deferredPrompt = e;
+  console.log("PWA lista para instalar 🔥");
+
+  // 👇 Crear botón manual
+  const btn = document.createElement("button");
+  btn.innerText = "Instalar App";
+  btn.style.position = "fixed";
+  btn.style.bottom = "20px";
+  btn.style.right = "20px";
+  btn.style.padding = "10px";
+  btn.style.background = "#007bff";
+  btn.style.color = "#fff";
+  btn.style.border = "none";
+  btn.style.borderRadius = "8px";
+  btn.style.zIndex = "9999";
+
+  document.body.appendChild(btn);
+
+  btn.addEventListener("click", () => {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(choice => {
+      if (choice.outcome === "accepted") {
+        console.log("Usuario instaló la app");
+      }
+      deferredPrompt = null;
+    });
+  });
 });
