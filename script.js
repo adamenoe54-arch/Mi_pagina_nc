@@ -27,7 +27,7 @@ const galeriaData = [
     altura:"8.4 cm",
     diametro:"13.2 cm",
     precio:"$45.000",
-    nota:"A partir de 10 unidades",
+    nota:"Valor unitario",
   
     imagenes:[
   
@@ -198,7 +198,7 @@ const galeriaData = [
     altura:"4.4 cm",
     diametro:"7.2 cm",
     precio:"$20.000",
-    nota:"A partir de 20 unidades",
+    nota:"Valor unitario",
     
     imagenes:[
     
@@ -252,7 +252,7 @@ const galeriaData = [
       altura:"26 cm",
       diametro:"12.2 cm",
       precio:"$65.000",
-      nota:"A partir de 5 unidades",
+      nota:"Valor unitario",
       
       imagenes:[
       {
@@ -280,7 +280,7 @@ const galeriaData = [
         altura:"22 cm",
         diametro:"8.4 cm",
         precio:"$55.000",
-        nota:"A partir de 5 unidades",
+        nota:"Valor unitario",
         
         imagenes:[
         {
@@ -308,7 +308,7 @@ const galeriaData = [
           altura:"10 cm",
           diametro:"8 cm",
           precio:"$35.000",
-          nota:"A partir de 10 unidades",
+          nota:"Valor unitario",
           
           imagenes:[
           
@@ -359,7 +359,7 @@ const galeriaData = [
             altura:"7 cm",
             diametro:"7 cm",
             precio:"$20.000",
-            nota:"A partir de 20 unidades",
+            nota:"Valor unitario",
             imagenes:[
             
             {
