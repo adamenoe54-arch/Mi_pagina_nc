@@ -26,7 +26,7 @@ const galeriaData = [
     titulo:"Portalápiz",
     altura:"8.4 cm",
     diametro:"13.2 cm",
-    precio:"$45.000",
+    precio:"$40.000",
     nota:"Valor unitario",
   
     imagenes:[
@@ -197,7 +197,7 @@ const galeriaData = [
     titulo:"Volumen",
     altura:"4.4 cm",
     diametro:"7.2 cm",
-    precio:"$20.000",
+    precio:"$15.000",
     nota:"Valor unitario",
     
     imagenes:[
@@ -251,7 +251,7 @@ const galeriaData = [
       titulo:"Jarrón",
       altura:"26 cm",
       diametro:"12.2 cm",
-      precio:"$65.000",
+      precio:"$55.000",
       nota:"Valor unitario",
       
       imagenes:[
@@ -279,7 +279,7 @@ const galeriaData = [
         titulo:"Solitario",
         altura:"22 cm",
         diametro:"8.4 cm",
-        precio:"$55.000",
+        precio:"$45.000",
         nota:"Valor unitario",
         
         imagenes:[
@@ -307,7 +307,7 @@ const galeriaData = [
           titulo:"PortaLapiz",
           altura:"10 cm",
           diametro:"8 cm",
-          precio:"$35.000",
+          precio:"$30.000",
           nota:"Valor unitario",
           
           imagenes:[
@@ -358,7 +358,7 @@ const galeriaData = [
             titulo:"Volumen",
             altura:"7 cm",
             diametro:"7 cm",
-            precio:"$20.000",
+            precio:"$15.000",
             nota:"Valor unitario",
             imagenes:[
             
@@ -721,3 +721,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
     });
   });
 });
+
+fetch("http://192.168.20.175:8000/pedidos")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+  });
