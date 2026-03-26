@@ -319,7 +319,7 @@ const galeriaData = [
           info:[
           "Diseño decorativo",
           "La grandeza del cóndor",
-          "Paisaje natutal",
+          "Paisaje natural",
           "Laguna de Tota",
           ],
           
