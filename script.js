@@ -34,7 +34,7 @@ const galeriaData = [
       //miniatura_portalapiz_mundial 
         {
           titulo:"Mundial 2026",
-          src:"imagenes/2.1.1.4._mundial/2.1.1.4.1._isometrico.webp",
+          src:"imagenes/2.1.1.4_mundial/isometrico.webp",
   
   info:[
   "Diseño inspirado en el Mundial 2026",
@@ -48,16 +48,16 @@ const galeriaData = [
   ],
   
   detalles:[
-  "imagenes/2.1.1.4._mundial/2.1.1.4.2._frontal.webp",
-  "imagenes/2.1.1.4._mundial/2.1.1.4.3._lateral.webp",
-  "imagenes/2.1.1.4._mundial/2.1.1.4.4._superior.webp",
-  "imagenes/2.1.1.4._mundial/2.1.1.4.5._inferior.webp"
+  "imagenes/2.1.1.4_mundial/frontal.webp",
+  "imagenes/2.1.1.4_mundial/lateral.webp",
+  "imagenes/2.1.1.4_mundial/superior.webp",
+  "imagenes/2.1.1.4_mundial/inferior.webp"
   ]
   },
   
   {
   titulo:"Mar del Plata",
-  src:"imagenes/2.1.1.6._mar_del_plata/2.1.1.6.1._isometrico.webp",
+  src:"imagenes/2.1.1.6_mar_del_plata/isometrico.webp",
   
   info:[
     "Diseño corporativo",
@@ -66,17 +66,17 @@ const galeriaData = [
   ],
   
   detalles:[
-  "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.2._frontal.webp",
-  "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.3._lateral.webp",
-  "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.4._superior.webp",
-  "imagenes/2.1.1.6._mar_del_plata/2.1.1.6.5._inferior.webp"
+  "imagenes/2.1.1.6_mar_del_plata/frontal.webp",
+  "imagenes/2.1.1.6_mar_del_plata/lateral.webp",
+  "imagenes/2.1.1.6_mar_del_plata/superior.webp",
+  "imagenes/2.1.1.6_mar_del_plata/inferior.webp"
   ]
   
   },
 
   {
     titulo:"Escritores Colombianos",
-    src:"imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.1._isometrico.webp",
+    src:"imagenes/2.1.1.1_escritores_colombianos/isometrico.webp",
     
     info:[
     "Gabriel García Márquez",
@@ -105,7 +105,7 @@ const galeriaData = [
 
     {
       titulo:"Escritores Universales",
-      src:"imagenes/2.1.1.2_escritores_universales/2.1.1.2.1._isometrico.webp",
+      src:"imagenes/2.1.1.2_escritores_universales/isometrico.webp",
       
       info:[
       "William Shakespeare",
@@ -125,17 +125,17 @@ const galeriaData = [
       ],
       
       detalles:[
-      "imagenes/2.1.1.2_escritores_universales/2.1.1.2.2._frontal.webp",
-      "imagenes/2.1.1.2_escritores_universales/2.1.1.2.3._lateral.webp",
-      "imagenes/2.1.1.2_escritores_universales/2.1.1.2.4._superior.webp",
-      "imagenes/2.1.1.2_escritores_universales/2.1.1.2.5._inferior.webp"
+      "imagenes/2.1.1.2_escritores_universales/frontal.webp",
+      "imagenes/2.1.1.2_escritores_universales/lateral.webp",
+      "imagenes/2.1.1.2_escritores_universales/superior.webp",
+      "imagenes/2.1.1.2_escritores_universales/inferior.webp"
       ]
       
       },
 
       {
         titulo:"Matemáticos y Físicos",
-        src:"imagenes/2.1.1.3._matemáticos/2.1.1.3.1._isometrico.webp",
+        src:"imagenes/2.1.1.3_matemáticos/isometrico.webp",
         
         info:[
         "Jordan Gauss",
@@ -153,17 +153,17 @@ const galeriaData = [
         ],
         
         detalles:[
-        "imagenes/2.1.1.3._matemáticos/2.1.1.3.2._frontal.webp",
-        "imagenes/2.1.1.3._matemáticos/2.1.1.3.3._lateral.webp",
-        "imagenes/2.1.1.3._matemáticos/2.1.1.3.4._superior.webp",
-        "imagenes/2.1.1.3._matemáticos/2.1.1.3.5._inferior.webp"
+        "imagenes/2.1.1.3_matemáticos/frontal.webp",
+        "imagenes/2.1.1.3_matemáticos/lateral.webp",
+        "imagenes/2.1.1.3_matemáticos/superior.webp",
+        "imagenes/2.1.1.3_matemáticos/inferior.webp"
         ]
         
         },
 
         {
           titulo:"Pintores Universales",
-          src:"imagenes/2.1.1.5._pintores_universales/2.1.1.5.1._isometrico.webp",
+          src:"imagenes/2.1.1.5_pintores_universales/isometrico.webp",
           
           info:[
           "Salvador Dalí",
@@ -182,10 +182,10 @@ const galeriaData = [
           ],
           
           detalles:[
-          "imagenes/2.1.1.5._pintores_universales/2.1.1.5.2._frontal.webp",
-          "imagenes/2.1.1.5._pintores_universales/2.1.1.5.3._lateral.webp",
-          "imagenes/2.1.1.5._pintores_universales/2.1.1.5.4._superior.webp",
-          "imagenes/2.1.1.5._pintores_universales/2.1.1.5.5._inferior.webp"
+          "imagenes/2.1.1.5_pintores_universales/frontal.webp",
+          "imagenes/2.1.1.5_pintores_universales/lateral.webp",
+          "imagenes/2.1.1.5_pintores_universales/superior.webp",
+          "imagenes/2.1.1.5_pintores_universales/inferior.webp"
           ]
           
           },
@@ -204,7 +204,7 @@ const galeriaData = [
     
     {
     titulo:"Mar del Plata",
-    src:"imagenes/2.2.1.1._mar_del_plata/2.2.1.1.1._isometrico.webp",
+    src:"imagenes/2.2.1.1_mar_del_plata/isometrico.webp",
     
     info:[
     
@@ -214,17 +214,17 @@ const galeriaData = [
     ],
     
     detalles:[
-    "imagenes/2.2.1.1._mar_del_plata/2.2.1.1.2._frontal.webp",
-    "imagenes/2.2.1.1._mar_del_plata/2.2.1.1.3._lateral.webp",
-    "imagenes/2.2.1.1._mar_del_plata/2.2.1.1.4._superior.webp",
-    "imagenes/2.2.1.1._mar_del_plata/2.2.1.1.5._inferior.webp"
+    "imagenes/2.2.1.1_mar_del_plata/frontal.webp",
+    "imagenes/2.2.1.1_mar_del_plata/lateral.webp",
+    "imagenes/2.2.1.1_mar_del_plata/superior.webp",
+    "imagenes/2.2.1.1_mar_del_plata/inferior.webp"
     ]
     
     },
     
     {
     titulo:"Mundial",
-    src:"imagenes/2.2.1.3._mundial/2.2.1.3.1._isometrico.webp",
+    src:"imagenes/2.2.1.3_mundial/isometrico.webp",
     
     info:[
       "Diseño inspirado en el Mundial 2026",
@@ -237,10 +237,10 @@ const galeriaData = [
     ],
     
     detalles:[
-    "imagenes/2.2.1.3._mundial/2.2.1.3.2._frontal.webp",
-    "imagenes/2.2.1.3._mundial/2.2.1.3.3._lateral.webp",
-    "imagenes/2.2.1.3._mundial/2.2.1.3.4._superior.webp",
-    "imagenes/2.2.1.3._mundial/2.2.1.3.5._inferior.webp"
+    "imagenes/2.2.1.3_mundial/frontal.webp",
+    "imagenes/2.2.1.3_mundial/lateral.webp",
+    "imagenes/2.2.1.3_mundial/superior.webp",
+    "imagenes/2.2.1.3_mundial/inferior.webp"
     ]
     },
     ]
@@ -257,7 +257,7 @@ const galeriaData = [
       imagenes:[
       {
       titulo:"Flores",
-      src:"imagenes/1.1.1._flores/1.1.1.1._isometrico.webp",
+      src:"imagenes/1.1.1_flores/isometrico.webp",
       
       info:[
       "imagen flor individual",
@@ -265,10 +265,10 @@ const galeriaData = [
       ],
       
       detalles:[
-      "imagenes/1.1.1._flores/1.1.1.2._frontal.webp",
-      "imagenes/1.1.1._flores/1.1.1.3._lateral.webp",
-      "imagenes/1.1.1._flores/1.1.1.4._superior.webp",
-      "imagenes/1.1.1._flores/1.1.1.5._inferior.webp"
+      "imagenes/1.1.1_flores/frontal.webp",
+      "imagenes/1.1.1_flores/lateral.webp",
+      "imagenes/1.1.1_flores/superior.webp",
+      "imagenes/1.1.1_flores/inferior.webp"
       ]
       },
       ]
@@ -285,7 +285,7 @@ const galeriaData = [
         imagenes:[
         {
         titulo:"Flores",
-        src:"imagenes/1.2.1._flores/1.2.1.1._isometrico.webp",
+        src:"imagenes/1.2.1_flores/isometrico.webp",
         
         info:[
           "imagen flor individual",
@@ -293,10 +293,10 @@ const galeriaData = [
           ],
         
         detalles:[
-        "imagenes/1.2.1._flores/1.2.1.2._frontal.webp",
-        "imagenes/1.2.1._flores/1.2.1.3._lateral.webp",
-        "imagenes/1.2.1._flores/1.2.1.4._superior.webp",
-        "imagenes/1.2.1._flores/1.2.1.5._inferior.webp"
+        "imagenes/1.2.1_flores/frontal.webp",
+        "imagenes/1.2.1_flores/lateral.webp",
+        "imagenes/1.2.1_flores/superior.webp",
+        "imagenes/1.2.1_flores/inferior.webp"
         ]
         },
         ]
@@ -314,7 +314,7 @@ const galeriaData = [
           
           {
           titulo:"Condor",
-          src:"imagenes/3.1.1.1._condor/3.1.1.1.1._isometrico.webp",
+          src:"imagenes/3.1.1.1_condor/isometrico.webp",
           
           info:[
           "Diseño decorativo",
@@ -324,17 +324,17 @@ const galeriaData = [
           ],
           
           detalles:[
-          "imagenes/3.1.1.1._condor/3.1.1.1.2._frontal.webp",
-          "imagenes/3.1.1.1._condor/3.1.1.1.3._lateral.webp",
-          "imagenes/3.1.1.1._condor/3.1.1.1.4._superior.webp",
-          "imagenes/3.1.1.1._condor/3.1.1.1.5._inferior.webp"
+          "imagenes/3.1.1.1_condor/frontal.webp",
+          "imagenes/3.1.1.1_condor/lateral.webp",
+          "imagenes/3.1.1.1_condor/superior.webp",
+          "imagenes/3.1.1.1_condor/inferior.webp"
           ]
           
           },
 
           {
             titulo:"Frutas",
-            src:"imagenes/3.1.1.2._frutas/3.1.1.2.1._isometrico.webp",
+            src:"imagenes/3.1.1.2_frutas/isometrico.webp",
             
             info:[
             "Variedad de frutas",
@@ -344,10 +344,10 @@ const galeriaData = [
             ],
             
             detalles:[
-            "imagenes/3.1.1.2._frutas/3.1.1.2.2._frontal.webp",
-            "imagenes/3.1.1.2._frutas/3.1.1.2.3._lateral.webp",
-            "imagenes/3.1.1.2._frutas/3.1.1.2.4._superior.webp",
-            "imagenes/3.1.1.2._frutas/3.1.1.2.5._inferior.webp"
+            "imagenes/3.1.1.2_frutas/frontal.webp",
+            "imagenes/3.1.1.2_frutas/lateral.webp",
+            "imagenes/3.1.1.2_frutas/superior.webp",
+            "imagenes/3.1.1.2_frutas/inferior.webp"
             ]
             },
             ]
@@ -364,7 +364,7 @@ const galeriaData = [
             
             {
             titulo:"Dollar",
-            src:"imagenes/3.2.1.1._dollar/3.2.1.1.1._isometrico.webp",
+            src:"imagenes/3.2.1.1_dollar/isometrico.webp",
             
             info:[
             "Imagen decorativa",
@@ -373,10 +373,10 @@ const galeriaData = [
             ],
             
             detalles:[
-            "imagenes/3.2.1.1._dollar/3.2.1.1.2._frontal.webp",
-            "imagenes/3.2.1.1._dollar/3.2.1.1.3._lateral.webp",
-            "imagenes/3.2.1.1._dollar/3.2.1.1.4._superior.webp",
-            "imagenes/3.2.1.1._dollar/3.2.1.1.5._inferior.webp"
+            "imagenes/3.2.1.1_dollar/frontal.webp",
+            "imagenes/3.2.1.1_dollar/lateral.webp",
+            "imagenes/3.2.1.1_dollar/superior.webp",
+            "imagenes/3.2.1.1_dollar/inferior.webp"
             ]
             },
             ]
