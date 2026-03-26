@@ -95,10 +95,10 @@ const galeriaData = [
     ],
     
     detalles:[
-    "imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.2._frontal.webp",
-    "imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.3._lateral.webp",
-    "imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.4._superior.webp",
-    "imagenes/2.1.1.1_escritores_colombianos/2.1.1.1.5._inferior.webp"
+    "imagenes/2.1.1.1_escritores_colombianos/frontal.webp",
+    "imagenes/2.1.1.1_escritores_colombianos/lateral.webp",
+    "imagenes/2.1.1.1_escritores_colombianos/superior.webp",
+    "imagenes/2.1.1.1_escritores_colombianos/inferior.webp"
     ]
     
     },
