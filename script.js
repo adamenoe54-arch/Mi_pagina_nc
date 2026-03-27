@@ -255,22 +255,41 @@ const galeriaData = [
       nota:"Valor unitario",
       
       imagenes:[
+      
       {
-      titulo:"Flores",
-      src:"imagenes/1.1.1_flores/isometrico.webp",
-      
-      info:[
-      "imagen flor individual",
-      "fondo con degradado en tonos grises",
-      ],
-      
-      detalles:[
-      "imagenes/1.1.1_flores/frontal.webp",
-      "imagenes/1.1.1_flores/lateral.webp",
-      "imagenes/1.1.1_flores/superior.webp",
-      "imagenes/1.1.1_flores/inferior.webp"
-      ]
-      },
+        titulo:"Textura",
+        src:"imagenes/1.1.2_textura/isometrico.webp",
+        
+        info:[
+        "imagen flor individual",
+        "fondo con degradado en tonos grises",
+        ],
+        
+        detalles:[
+        "imagenes/1.1.2_textura/frontal.webp",
+        "imagenes/1.1.2_textura/lateral.webp",
+        "imagenes/1.1.2_textura/superior.webp",
+        "imagenes/1.1.2_textura/inferior.webp"
+        ]
+        },
+
+        {
+          titulo:"Flores",
+          src:"imagenes/1.1.1_flores/isometrico.webp",
+          
+          info:[
+          "imagen flor individual",
+          "fondo con degradado en tonos grises",
+          ],
+          
+          detalles:[
+          "imagenes/1.1.1_flores/frontal.webp",
+          "imagenes/1.1.1_flores/lateral.webp",
+          "imagenes/1.1.1_flores/superior.webp",
+          "imagenes/1.1.1_flores/inferior.webp"
+          ]
+          }
+    
       ]
       },
 
