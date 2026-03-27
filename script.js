@@ -27,7 +27,7 @@ const galeriaData = [
     altura:"8.4 cm",
     diametro:"13.2 cm",
     precio:"$40.000",
-    nota:"Valor unitario",
+    nota:"Valor Unitario",
   
     imagenes:[
   
@@ -198,7 +198,7 @@ const galeriaData = [
     altura:"4.4 cm",
     diametro:"7.2 cm",
     precio:"$15.000",
-    nota:"Valor unitario",
+    nota:"Valor Unitario",
     
     imagenes:[
     
@@ -252,7 +252,7 @@ const galeriaData = [
       altura:"26 cm",
       diametro:"12.2 cm",
       precio:"$55.000",
-      nota:"Valor unitario",
+      nota:"Valor Unitario",
       
       imagenes:[
       
@@ -261,8 +261,8 @@ const galeriaData = [
         src:"imagenes/1.1.2_textura/isometrico.webp",
         
         info:[
-        "imagen flor individual",
-        "fondo con degradado en tonos grises",
+        "Fondo texturas cesta",
+        
         ],
         
         detalles:[
@@ -299,7 +299,7 @@ const galeriaData = [
         altura:"22 cm",
         diametro:"8.4 cm",
         precio:"$45.000",
-        nota:"Valor unitario",
+        nota:"Valor Unitario",
         
         imagenes:[
         {
@@ -327,7 +327,7 @@ const galeriaData = [
           altura:"10 cm",
           diametro:"8 cm",
           precio:"$30.000",
-          nota:"Valor unitario",
+          nota:"Valor Unitario",
           
           imagenes:[
           
@@ -378,7 +378,7 @@ const galeriaData = [
             altura:"7 cm",
             diametro:"7 cm",
             precio:"$15.000",
-            nota:"Valor unitario",
+            nota:"Valor Unitario",
             imagenes:[
             
             {
