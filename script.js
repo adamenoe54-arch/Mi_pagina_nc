@@ -375,8 +375,8 @@ const galeriaData = [
           {
             id:6,
             titulo:"Volumen",
-            altura:"7 cm",
-            diametro:"7 cm",
+            altura:"5.5 cm",
+            diametro:"5.5 cm",
             precio:"$15.000",
             nota:"Valor Unitario",
             imagenes:[
